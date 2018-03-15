@@ -36,6 +36,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="进货" image="first" id="acW-dT-cKf"/>
                     <navigationItem key="navigationItem" title="Title" id="ngk-nd-QSK"/>
+                    <connections>
+                        <outlet property="tableViewStorageRecords" destination="cTw-ot-wWV" id="7BN-Gn-O42"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
