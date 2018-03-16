@@ -8,35 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		4D1C3A51205223470014DDE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C3A50205223470014DDE9 /* AppDelegate.swift */; };
-		4D1C3A58205223470014DDE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D1C3A56205223470014DDE9 /* Main.storyboard */; };
 		4D1C3A5A205223470014DDE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D1C3A59205223470014DDE9 /* Assets.xcassets */; };
-		4D1C3A5D205223470014DDE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D1C3A5B205223470014DDE9 /* LaunchScreen.storyboard */; };
 		4D1C3AA620558CD30014DDE9 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1C3AA320558CD30014DDE9 /* ReactiveSwift.framework */; };
 		4D1C3AA820558CD90014DDE9 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1C3AA220558CD20014DDE9 /* ReactiveCocoa.framework */; };
 		4D1C3AA920558CD90014DDE9 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1C3AA220558CD20014DDE9 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D1C3AAB20558CD90014DDE9 /* ReactiveSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1C3AA320558CD30014DDE9 /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4D1C3AAC20558CD90014DDE9 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1C3AA420558CD30014DDE9 /* Result.framework */; };
-		4D1C3AAD20558CD90014DDE9 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1C3AA420558CD30014DDE9 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4D2A45B0205807C600A2BE99 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2A45AF205807C600A2BE99 /* Realm.framework */; };
 		4D2A45C420596E3500A2BE99 /* StorageRecordListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2A45C220596E3500A2BE99 /* StorageRecordListViewController.swift */; };
 		4D2A45C7205974EE00A2BE99 /* SellRecordListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2A45C6205974EE00A2BE99 /* SellRecordListViewController.swift */; };
 		4D2A45D3205A68D700A2BE99 /* StorageRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2A45D1205A68D700A2BE99 /* StorageRecordTableViewCell.swift */; };
 		4D2A45D4205A68D700A2BE99 /* StorageRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D2A45D2205A68D700A2BE99 /* StorageRecordTableViewCell.xib */; };
+		4D2A45D6205BB69D00A2BE99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D1C3A56205223470014DDE9 /* Main.storyboard */; };
+		4D2A45D8205BB7DD00A2BE99 /* StorageRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2A45D7205BB7DD00A2BE99 /* StorageRecordModel.swift */; };
+		4D2A45DA205BBAF400A2BE99 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2A45D9205BBAF400A2BE99 /* Result.framework */; };
+		4D2A45DB205BBB0500A2BE99 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2A45D9205BBAF400A2BE99 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4D2A45DD205BBB2A00A2BE99 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2A45DC205BBB2A00A2BE99 /* ReactiveSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		4D1C3A77205585B60014DDE9 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4D1C3AAD20558CD90014DDE9 /* Result.framework in Embed Frameworks */,
+				4D2A45DB205BBB0500A2BE99 /* Result.framework in Embed Frameworks */,
 				4D1C3AA920558CD90014DDE9 /* ReactiveCocoa.framework in Embed Frameworks */,
 				4D1C3AAB20558CD90014DDE9 /* ReactiveSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -49,12 +49,13 @@
 		4D1C3A5E205223470014DDE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D1C3AA220558CD20014DDE9 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = ../Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		4D1C3AA320558CD30014DDE9 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = ../Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
-		4D1C3AA420558CD30014DDE9 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = ../Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
-		4D2A45AF205807C600A2BE99 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = ../Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		4D2A45C220596E3500A2BE99 /* StorageRecordListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageRecordListViewController.swift; sourceTree = "<group>"; };
 		4D2A45C6205974EE00A2BE99 /* SellRecordListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellRecordListViewController.swift; sourceTree = "<group>"; };
 		4D2A45D1205A68D700A2BE99 /* StorageRecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageRecordTableViewCell.swift; sourceTree = "<group>"; };
 		4D2A45D2205A68D700A2BE99 /* StorageRecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StorageRecordTableViewCell.xib; sourceTree = "<group>"; };
+		4D2A45D7205BB7DD00A2BE99 /* StorageRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageRecordModel.swift; sourceTree = "<group>"; };
+		4D2A45D9205BBAF400A2BE99 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = ../Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		4D2A45DC205BBB2A00A2BE99 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = ../Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +63,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D2A45B0205807C600A2BE99 /* Realm.framework in Frameworks */,
-				4D1C3AAC20558CD90014DDE9 /* Result.framework in Frameworks */,
 				4D1C3AA620558CD30014DDE9 /* ReactiveSwift.framework in Frameworks */,
 				4D1C3AA820558CD90014DDE9 /* ReactiveCocoa.framework in Frameworks */,
+				4D2A45DA205BBAF400A2BE99 /* Result.framework in Frameworks */,
+				4D2A45DD205BBB2A00A2BE99 /* ReactiveSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,10 +109,10 @@
 		4D1C3A79205586A50014DDE9 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				4D2A45AF205807C600A2BE99 /* Realm.framework */,
+				4D2A45DC205BBB2A00A2BE99 /* ReactiveSwift.framework */,
+				4D2A45D9205BBAF400A2BE99 /* Result.framework */,
 				4D1C3AA220558CD20014DDE9 /* ReactiveCocoa.framework */,
 				4D1C3AA320558CD30014DDE9 /* ReactiveSwift.framework */,
-				4D1C3AA420558CD30014DDE9 /* Result.framework */,
 			);
 			name = Framework;
 			sourceTree = "<group>";
@@ -160,6 +161,7 @@
 		4D2A45D0205A68B700A2BE99 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4D2A45D7205BB7DD00A2BE99 /* StorageRecordModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -225,10 +227,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D1C3A5D205223470014DDE9 /* LaunchScreen.storyboard in Resources */,
+				4D2A45D6205BB69D00A2BE99 /* Main.storyboard in Resources */,
 				4D1C3A5A205223470014DDE9 /* Assets.xcassets in Resources */,
 				4D2A45D4205A68D700A2BE99 /* StorageRecordTableViewCell.xib in Resources */,
-				4D1C3A58205223470014DDE9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D2A45D8205BB7DD00A2BE99 /* StorageRecordModel.swift in Sources */,
 				4D2A45D3205A68D700A2BE99 /* StorageRecordTableViewCell.swift in Sources */,
 				4D2A45C7205974EE00A2BE99 /* SellRecordListViewController.swift in Sources */,
 				4D1C3A51205223470014DDE9 /* AppDelegate.swift in Sources */,

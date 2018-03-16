@@ -10,8 +10,9 @@ import UIKit
 
 class StorageRecordListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    @IBOutlet weak var tableViewStorageRecords: UITableView!
     var arrDatasource:[String]?
+    
+    @IBOutlet weak var tableViewStorageRecords: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
