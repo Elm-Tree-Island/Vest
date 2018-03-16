@@ -18,8 +18,8 @@ class StorageRecordListViewController: UIViewController, UITableViewDataSource, 
         
         self.tabBarController?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped(_:)))
         
-        // Setup Data
-        self.arrDatasource = ["第一个单", "第2个单", "第3个单", "第4个单", "第5个单", "第6个单", "第7个单", "第8个单", "第9个单", "第14个单", "第51个单", "第16个单"]
+        // TODO: Setup Data
+        self.arrDatasource = []
         
         // Setup UI
         self.setupTableview()
@@ -59,9 +59,8 @@ class StorageRecordListViewController: UIViewController, UITableViewDataSource, 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "storage_record_cell_identifier"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
-        if cell != nil {
-            cell.textLabel?.text = self.arrDatasource![indexPath.row]
-        }
+        
+        // TODO: INIT Data
         
         return cell;
         

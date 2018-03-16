@@ -9,7 +9,15 @@
 import UIKit
 
 class StorageRecordTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var ivProductPic: UIImageView!           // 商品图片
+    @IBOutlet weak var lblName: UILabel!                    // 商品名称
+    @IBOutlet weak var lblSellingPrice: UILabel!            // 售价（RMB）
+    @IBOutlet weak var lblSellingCount: UILabel!            // 销量
+    @IBOutlet weak var lblLeftCount: UILabel!               // 库存量
+    @IBOutlet weak var lblSalesValue: UILabel!              // 销售额
+    @IBOutlet weak var lblTime: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
