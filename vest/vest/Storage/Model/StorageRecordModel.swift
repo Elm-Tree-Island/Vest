@@ -11,17 +11,30 @@ import RealmSwift
 
 class StorageRecordModel: NSObject {
 //    var recordId:NSString
-    var name:NSString! = ""                         // 货品名称
+    var name:String! = ""                         // 货品名称
     
     var cost:Double? = 0.0                          // 成本价格
     var price:Double? = 0.0                         // 售价
     var otherCost:Double? = 0.0                     // 其他费用
     
     var totalCount:UInt = 0                         // 进货总数
-    var picUrl:NSString! = ""
-    var createTime:NSDate?
+    var soldCount:UInt = 0                          // 已售数量
+    
+    var picUrl:String! = ""                       // 货物图片
+    var time:Date!                                  // 进货时间
     
     override init() {
         super.init()
+        
+        self.name = ""
+        
+        self.cost = 0.0
+        self.price = 0.0
+        self.otherCost = 0.0
+        
+        self.totalCount = 0
+        self.picUrl = ""
+        
+        self.time = Date()
     }
 }

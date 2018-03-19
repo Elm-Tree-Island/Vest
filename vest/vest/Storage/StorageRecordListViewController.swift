@@ -10,7 +10,7 @@ import UIKit
 
 class StorageRecordListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    var arrDatasource:[String]?
+    var arrDatasource:[StorageRecordModel]?
     
     @IBOutlet weak var tableViewStorageRecords: UITableView!
     
@@ -19,8 +19,16 @@ class StorageRecordListViewController: UIViewController, UITableViewDataSource, 
         
         self.tabBarController?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped(_:)))
         
-        // TODO: Setup Data
-        self.arrDatasource = []
+        // TEST Data
+        let model1 = StorageRecordModel()
+        model1.price = 1.3
+        model1.cost = 1.02
+        model1.totalCount = 200
+        model1.soldCount = 120
+        model1.name = "佑天兰面膜（金色）"
+        model1.time = Date()
+        
+        self.arrDatasource = [model1, model1, model1];
         
         // Setup UI
         self.setupTableview()
@@ -62,6 +70,8 @@ class StorageRecordListViewController: UIViewController, UITableViewDataSource, 
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         
         // TODO: INIT Data
+        let cellStorage = cell as? StorageRecordTableViewCell
+        cellStorage?.configWithModel(self.arrDatasource![indexPath.row])
         
         return cell;
         
