@@ -1,9 +1,6 @@
 # ReactiveCocoa
 github "ReactiveCocoa/ReactiveCocoa" ~> 7.0
 
-# Realm DB
-github "realm/realm-cocoa"
-
 # Masonry
 github "SnapKit/SnapKit" ~> 4.0.0
 
