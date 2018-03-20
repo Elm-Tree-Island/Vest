@@ -10,7 +10,8 @@ import UIKit
 import RealmSwift
 
 class StorageRecordModel: NSObject {
-//    var recordId:NSString
+//    var recordId:NSString                           // 货物ID
+
     var name:String! = ""                         // 货品名称
     
     var cost:Double? = 0.0                          // 成本价格

@@ -57,7 +57,8 @@ class StorageRecordListViewController: UIViewController, UITableViewDataSource, 
     // MARK: - Event handling
     
     @objc func addTapped(_ sender: UIBarButtonItem) {
-        NSLog("Add new called")
+        let addNewVC = AddStorageViewController()
+        self.navigationController?.pushViewController(addNewVC, animated: true)
     }
     
     // MARK: - UITableViewDataSource
@@ -73,12 +74,14 @@ class StorageRecordListViewController: UIViewController, UITableViewDataSource, 
         let cellStorage = cell as? StorageRecordTableViewCell
         cellStorage?.configWithModel(self.arrDatasource![indexPath.row])
         
+        cell.selectionStyle = .none
+
         return cell;
-        
     }
 
     // MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        NSLog("点击到了第\(indexPath.row)行")
+        let detailVC = StorageItemDetailViewController()
+        self.navigationController?.pushViewController(detailVC, animated: true)
     }
 }
