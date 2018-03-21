@@ -21,12 +21,13 @@
 		4D2A45D8205BB7DD00A2BE99 /* MCStorageRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2A45D7205BB7DD00A2BE99 /* MCStorageRecordModel.swift */; };
 		4D2A45DA205BBAF400A2BE99 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2A45D9205BBAF400A2BE99 /* Result.framework */; };
 		4D2A45DB205BBB0500A2BE99 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2A45D9205BBAF400A2BE99 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4D2A45DD205BBB2A00A2BE99 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2A45DC205BBB2A00A2BE99 /* ReactiveSwift.framework */; };
 		4D2A45EB206001D600A2BE99 /* MCAddStorageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2A45E9206001D600A2BE99 /* MCAddStorageViewController.swift */; };
 		4D2A45EC206001D600A2BE99 /* MCAddStorageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D2A45EA206001D600A2BE99 /* MCAddStorageViewController.xib */; };
 		4D2A45EF2060036F00A2BE99 /* MCStorageRecordDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2A45ED2060036F00A2BE99 /* MCStorageRecordDetailViewController.swift */; };
 		4D2A45F02060036F00A2BE99 /* MCStorageRecordDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D2A45EE2060036F00A2BE99 /* MCStorageRecordDetailViewController.xib */; };
 		4D52FF372061FB0A00ABB17A /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D52FF362061FB0A00ABB17A /* SQLite.framework */; };
+		4D52FF3A206208A200ABB17A /* MCDatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D52FF39206208A200ABB17A /* MCDatabaseHelper.swift */; };
+		4D52FF3F2062521900ABB17A /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D52FF362061FB0A00ABB17A /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,6 +37,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				4D52FF3F2062521900ABB17A /* SQLite.framework in Embed Frameworks */,
 				4D2A45DB205BBB0500A2BE99 /* Result.framework in Embed Frameworks */,
 				4D1C3AA920558CD90014DDE9 /* ReactiveCocoa.framework in Embed Frameworks */,
 				4D1C3AAB20558CD90014DDE9 /* ReactiveSwift.framework in Embed Frameworks */,
@@ -66,6 +68,8 @@
 		4D2A45ED2060036F00A2BE99 /* MCStorageRecordDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCStorageRecordDetailViewController.swift; sourceTree = "<group>"; };
 		4D2A45EE2060036F00A2BE99 /* MCStorageRecordDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCStorageRecordDetailViewController.xib; sourceTree = "<group>"; };
 		4D52FF362061FB0A00ABB17A /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = ../Carthage/Build/iOS/SQLite.framework; sourceTree = "<group>"; };
+		4D52FF39206208A200ABB17A /* MCDatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCDatabaseHelper.swift; sourceTree = "<group>"; };
+		4D52FF4120629D7900ABB17A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,11 +77,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D52FF372061FB0A00ABB17A /* SQLite.framework in Frameworks */,
 				4D1C3AA620558CD30014DDE9 /* ReactiveSwift.framework in Frameworks */,
 				4D1C3AA820558CD90014DDE9 /* ReactiveCocoa.framework in Frameworks */,
 				4D2A45DA205BBAF400A2BE99 /* Result.framework in Frameworks */,
-				4D52FF372061FB0A00ABB17A /* SQLite.framework in Frameworks */,
-				4D2A45DD205BBB2A00A2BE99 /* ReactiveSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,8 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				4D1C3A4F205223470014DDE9 /* vest */,
-				4D1C3A79205586A50014DDE9 /* Framework */,
 				4D1C3A4E205223470014DDE9 /* Products */,
+				4D52FF4020629D7900ABB17A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,18 +119,6 @@
 				4D1C3A5E205223470014DDE9 /* Info.plist */,
 			);
 			path = vest;
-			sourceTree = "<group>";
-		};
-		4D1C3A79205586A50014DDE9 /* Framework */ = {
-			isa = PBXGroup;
-			children = (
-				4D52FF362061FB0A00ABB17A /* SQLite.framework */,
-				4D2A45DC205BBB2A00A2BE99 /* ReactiveSwift.framework */,
-				4D2A45D9205BBAF400A2BE99 /* Result.framework */,
-				4D1C3AA220558CD20014DDE9 /* ReactiveCocoa.framework */,
-				4D1C3AA320558CD30014DDE9 /* ReactiveSwift.framework */,
-			);
-			name = Framework;
 			sourceTree = "<group>";
 		};
 		4D2A45BD20596BF100A2BE99 /* Storage */ = {
@@ -186,8 +177,22 @@
 		4D52FF382062073100ABB17A /* DB */ = {
 			isa = PBXGroup;
 			children = (
+				4D52FF39206208A200ABB17A /* MCDatabaseHelper.swift */,
 			);
 			path = DB;
+			sourceTree = "<group>";
+		};
+		4D52FF4020629D7900ABB17A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D52FF362061FB0A00ABB17A /* SQLite.framework */,
+				4D1C3AA320558CD30014DDE9 /* ReactiveSwift.framework */,
+				4D2A45DC205BBB2A00A2BE99 /* ReactiveSwift.framework */,
+				4D2A45D9205BBAF400A2BE99 /* Result.framework */,
+				4D1C3AA220558CD20014DDE9 /* ReactiveCocoa.framework */,
+				4D52FF4120629D7900ABB17A /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,16 +269,16 @@
 /* Begin PBXShellScriptBuildPhase section */
 		4D1C3A782055865A0014DDE9 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "";
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -288,6 +293,7 @@
 				4D2A45C7205974EE00A2BE99 /* MCSellRecordListViewController.swift in Sources */,
 				4D1C3A51205223470014DDE9 /* AppDelegate.swift in Sources */,
 				4D2A45EF2060036F00A2BE99 /* MCStorageRecordDetailViewController.swift in Sources */,
+				4D52FF3A206208A200ABB17A /* MCDatabaseHelper.swift in Sources */,
 				4D2A45C420596E3500A2BE99 /* MCStorageRecordListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,7 +435,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ENNJNCUK8H;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS/**";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = vest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks \"$(SRCROOT)/../Carthage/Build/iOS\"";
@@ -446,7 +453,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ENNJNCUK8H;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS/**";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = vest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks \"$(SRCROOT)/../Carthage/Build/iOS\"";

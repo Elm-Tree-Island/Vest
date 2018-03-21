@@ -32,6 +32,10 @@ class MCStorageRecordListViewController: UIViewController, UITableViewDataSource
         
         // Setup UI
         self.setupTableview()
+        
+        // FIXME: Test Create Table -> Storage
+        let helper = MCDatabaseHelper()
+        helper.createTableStorage()
     }
     
     override func viewWillAppear(_ animated: Bool) {
