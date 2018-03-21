@@ -26,6 +26,7 @@
 		4D2A45EC206001D600A2BE99 /* AddStorageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D2A45EA206001D600A2BE99 /* AddStorageViewController.xib */; };
 		4D2A45EF2060036F00A2BE99 /* StorageItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2A45ED2060036F00A2BE99 /* StorageItemDetailViewController.swift */; };
 		4D2A45F02060036F00A2BE99 /* StorageItemDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D2A45EE2060036F00A2BE99 /* StorageItemDetailViewController.xib */; };
+		4D52FF372061FB0A00ABB17A /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D52FF362061FB0A00ABB17A /* SQLite.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -64,6 +65,7 @@
 		4D2A45EA206001D600A2BE99 /* AddStorageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddStorageViewController.xib; sourceTree = "<group>"; };
 		4D2A45ED2060036F00A2BE99 /* StorageItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageItemDetailViewController.swift; sourceTree = "<group>"; };
 		4D2A45EE2060036F00A2BE99 /* StorageItemDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StorageItemDetailViewController.xib; sourceTree = "<group>"; };
+		4D52FF362061FB0A00ABB17A /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = ../Carthage/Build/iOS/SQLite.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				4D1C3AA620558CD30014DDE9 /* ReactiveSwift.framework in Frameworks */,
 				4D1C3AA820558CD90014DDE9 /* ReactiveCocoa.framework in Frameworks */,
 				4D2A45DA205BBAF400A2BE99 /* Result.framework in Frameworks */,
+				4D52FF372061FB0A00ABB17A /* SQLite.framework in Frameworks */,
 				4D2A45DD205BBB2A00A2BE99 /* ReactiveSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,6 +120,7 @@
 		4D1C3A79205586A50014DDE9 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				4D52FF362061FB0A00ABB17A /* SQLite.framework */,
 				4D2A45DC205BBB2A00A2BE99 /* ReactiveSwift.framework */,
 				4D2A45D9205BBAF400A2BE99 /* Result.framework */,
 				4D1C3AA220558CD20014DDE9 /* ReactiveCocoa.framework */,

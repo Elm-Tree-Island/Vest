@@ -6,3 +6,6 @@ github "SnapKit/SnapKit" ~> 4.0.0
 
 # Cocoa Lumberjack
 github "CocoaLumberjack/CocoaLumberjack"
+
+# Database library SQLite.swift
+github "stephencelis/SQLite.swift" ~> 0.11.4
