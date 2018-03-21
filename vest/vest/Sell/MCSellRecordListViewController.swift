@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SellRecordListViewController: UIViewController {
+class MCSellRecordListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

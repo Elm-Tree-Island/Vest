@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StorageItemDetailViewController: UIViewController {
+class MCStorageRecordDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

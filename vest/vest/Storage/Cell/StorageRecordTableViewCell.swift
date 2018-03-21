@@ -32,7 +32,7 @@ class StorageRecordTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configWithModel(_ model:StorageRecordModel) {
+    func configWithModel(_ model:MCStorageRecordModel) {
         // TODO: Set Icon image
         
         self.lblName.text = model.name

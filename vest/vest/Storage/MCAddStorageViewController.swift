@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddStorageViewController: UIViewController {
+class MCAddStorageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

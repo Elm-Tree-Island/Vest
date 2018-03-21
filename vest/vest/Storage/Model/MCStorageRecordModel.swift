@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class StorageRecordModel: NSObject {
+class MCStorageRecordModel: NSObject {
 //    var recordId:NSString                           // 货物ID
 
     var name:String! = ""                         // 货品名称

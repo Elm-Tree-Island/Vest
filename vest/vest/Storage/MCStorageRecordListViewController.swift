@@ -8,9 +8,9 @@
 
 import UIKit
 
-class StorageRecordListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MCStorageRecordListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    var arrDatasource:[StorageRecordModel]?
+    var arrDatasource:[MCStorageRecordModel]?
     
     @IBOutlet weak var tableViewStorageRecords: UITableView!
     
@@ -20,7 +20,7 @@ class StorageRecordListViewController: UIViewController, UITableViewDataSource, 
         self.tabBarController?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped(_:)))
         
         // TEST Data
-        let model1 = StorageRecordModel()
+        let model1 = MCStorageRecordModel()
         model1.price = 1.3
         model1.cost = 1.02
         model1.totalCount = 200
@@ -57,7 +57,7 @@ class StorageRecordListViewController: UIViewController, UITableViewDataSource, 
     // MARK: - Event handling
     
     @objc func addTapped(_ sender: UIBarButtonItem) {
-        let addNewVC = AddStorageViewController()
+        let addNewVC = MCAddStorageViewController()
         self.navigationController?.pushViewController(addNewVC, animated: true)
     }
     
@@ -81,7 +81,7 @@ class StorageRecordListViewController: UIViewController, UITableViewDataSource, 
 
     // MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailVC = StorageItemDetailViewController()
+        let detailVC = MCStorageRecordDetailViewController()
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
 }
