@@ -28,6 +28,7 @@
 		4D52FF372061FB0A00ABB17A /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D52FF362061FB0A00ABB17A /* SQLite.framework */; };
 		4D52FF3A206208A200ABB17A /* MCDatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D52FF39206208A200ABB17A /* MCDatabaseHelper.swift */; };
 		4D52FF3F2062521900ABB17A /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D52FF362061FB0A00ABB17A /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4D52FF4720639B7700ABB17A /* CleanroomLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D52FF4620639B7700ABB17A /* CleanroomLogger.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -70,6 +71,7 @@
 		4D52FF362061FB0A00ABB17A /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = ../Carthage/Build/iOS/SQLite.framework; sourceTree = "<group>"; };
 		4D52FF39206208A200ABB17A /* MCDatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCDatabaseHelper.swift; sourceTree = "<group>"; };
 		4D52FF4120629D7900ABB17A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		4D52FF4620639B7700ABB17A /* CleanroomLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CleanroomLogger.framework; path = ../Carthage/Build/iOS/CleanroomLogger.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			files = (
 				4D52FF372061FB0A00ABB17A /* SQLite.framework in Frameworks */,
 				4D1C3AA620558CD30014DDE9 /* ReactiveSwift.framework in Frameworks */,
+				4D52FF4720639B7700ABB17A /* CleanroomLogger.framework in Frameworks */,
 				4D1C3AA820558CD90014DDE9 /* ReactiveCocoa.framework in Frameworks */,
 				4D2A45DA205BBAF400A2BE99 /* Result.framework in Frameworks */,
 			);
@@ -185,6 +188,7 @@
 		4D52FF4020629D7900ABB17A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4D52FF4620639B7700ABB17A /* CleanroomLogger.framework */,
 				4D52FF362061FB0A00ABB17A /* SQLite.framework */,
 				4D1C3AA320558CD30014DDE9 /* ReactiveSwift.framework */,
 				4D2A45DC205BBB2A00A2BE99 /* ReactiveSwift.framework */,

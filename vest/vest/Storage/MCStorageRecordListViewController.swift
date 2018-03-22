@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CleanroomLogger
 
 class MCStorageRecordListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -30,7 +31,7 @@ class MCStorageRecordListViewController: UIViewController, UITableViewDataSource
         self.arrDatasource = MCDatabaseHelper.sharedInstance.getAllStorageRecord()
         self.tableViewStorageRecords.reloadData()
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
