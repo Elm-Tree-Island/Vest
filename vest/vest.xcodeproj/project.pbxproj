@@ -29,6 +29,7 @@
 		4D52FF3A206208A200ABB17A /* MCDatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D52FF39206208A200ABB17A /* MCDatabaseHelper.swift */; };
 		4D52FF3F2062521900ABB17A /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D52FF362061FB0A00ABB17A /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D52FF4720639B7700ABB17A /* CleanroomLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D52FF4620639B7700ABB17A /* CleanroomLogger.framework */; };
+		4D52FF4B20639D0E00ABB17A /* MCBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D52FF4A20639D0E00ABB17A /* MCBaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -72,6 +73,7 @@
 		4D52FF39206208A200ABB17A /* MCDatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCDatabaseHelper.swift; sourceTree = "<group>"; };
 		4D52FF4120629D7900ABB17A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		4D52FF4620639B7700ABB17A /* CleanroomLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CleanroomLogger.framework; path = ../Carthage/Build/iOS/CleanroomLogger.framework; sourceTree = "<group>"; };
+		4D52FF4A20639D0E00ABB17A /* MCBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCBaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,11 +112,11 @@
 		4D1C3A4F205223470014DDE9 /* vest */ = {
 			isa = PBXGroup;
 			children = (
-				4D52FF382062073100ABB17A /* DB */,
 				4D2A45BD20596BF100A2BE99 /* Storage */,
 				4D2A45BF20596D5700A2BE99 /* Sell */,
 				4D2A45C020596D7100A2BE99 /* Summary */,
 				4D2A45C120596D8600A2BE99 /* Setting */,
+				4D52FF4920639CE400ABB17A /* Common */,
 				4D1C3A50205223470014DDE9 /* AppDelegate.swift */,
 				4D1C3A56205223470014DDE9 /* Main.storyboard */,
 				4D1C3A59205223470014DDE9 /* Assets.xcassets */,
@@ -197,6 +199,23 @@
 				4D52FF4120629D7900ABB17A /* libsqlite3.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4D52FF4820639C7B00ABB17A /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				4D52FF4A20639D0E00ABB17A /* MCBaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		4D52FF4920639CE400ABB17A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4D52FF4820639C7B00ABB17A /* Base */,
+				4D52FF382062073100ABB17A /* DB */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,6 +313,7 @@
 				4D2A45D8205BB7DD00A2BE99 /* MCStorageRecordModel.swift in Sources */,
 				4D2A45D3205A68D700A2BE99 /* StorageRecordTableViewCell.swift in Sources */,
 				4D2A45EB206001D600A2BE99 /* MCAddStorageViewController.swift in Sources */,
+				4D52FF4B20639D0E00ABB17A /* MCBaseViewController.swift in Sources */,
 				4D2A45C7205974EE00A2BE99 /* MCSellRecordListViewController.swift in Sources */,
 				4D1C3A51205223470014DDE9 /* AppDelegate.swift in Sources */,
 				4D2A45EF2060036F00A2BE99 /* MCStorageRecordDetailViewController.swift in Sources */,

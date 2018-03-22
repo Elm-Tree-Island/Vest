@@ -1,18 +1,18 @@
 //
-//  StorageItemDetailViewController.swift
+//  MCBaseViewController.swift
 //  VEST
 //
-//  Created by Mark on 2018/3/19.
+//  Created by Mark on 2018/3/22.
 //  Copyright © 2018年 Mark. All rights reserved.
 //
 
 import UIKit
+import CleanroomLogger
 
-class MCStorageRecordDetailViewController: MCBaseViewController {
+class MCBaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = NSLocalizedString("Detail", comment: "")
 
         // Do any additional setup after loading the view.
     }

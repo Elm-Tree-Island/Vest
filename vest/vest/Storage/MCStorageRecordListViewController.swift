@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import CleanroomLogger
 
-class MCStorageRecordListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MCStorageRecordListViewController: MCBaseViewController, UITableViewDataSource, UITableViewDelegate {
 
     var arrDatasource:NSArray?
     

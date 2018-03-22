@@ -8,6 +8,7 @@
 
 import UIKit
 import SQLite
+import CleanroomLogger
 
 class MCDatabaseHelper: NSObject {
     
@@ -30,9 +31,9 @@ class MCDatabaseHelper: NSObject {
     private func connectDatabase(filePath: String) -> Void {
         do {
             dbConnection = try Connection(filePath)
-            print("Database connect success, DB file path: \(filePath)")
+            Log.debug?.message("Database connect success, DB file path: \(filePath)")
         } catch {
-            print("Database connect failed.")
+            Log.error?.message("Database connect failed.")
         }
     }
     
@@ -71,14 +72,14 @@ class MCDatabaseHelper: NSObject {
                 t.column(TABLE_STORAGE_CREATE_TIME)
             })
         } catch {
-            print("Create table storage failed")
+            Log.error?.message("Create table storage failed")
         }
     }
     
     
     /// Get all the storage record in the database
     ///
-    /// - Returns: <#return value description#>
+    /// - Returns: NSArray<MCStorageRecordModel>
     func getAllStorageRecord() -> NSArray {
         let queryStorage = TABLE_STORAGE.order(TABLE_STORAGE_CREATE_TIME.desc)
         let arrResult = NSMutableArray()
@@ -120,8 +121,9 @@ class MCDatabaseHelper: NSObject {
                                                                   
                                                                   TABLE_STORAGE_ICON_URL <- storageModel.picUrl,
                                                                   TABLE_STORAGE_CREATE_TIME <- storageModel.time))
-            print("Insert storage successfully, new RowId = \(rowID)")
+            Log.debug?.message("Insert storage successfully, new RowId = \(rowID)")
         } catch {
+            Log.error?.message("Insert storage record Failed, product name\(storageModel.name)")
             return false
         }
         return true

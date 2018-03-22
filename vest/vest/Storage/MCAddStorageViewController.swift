@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CleanroomLogger
 
-class MCAddStorageViewController: UIViewController {
+class MCAddStorageViewController: MCBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,9 +36,9 @@ class MCAddStorageViewController: UIViewController {
         
         let insertResult = MCDatabaseHelper.sharedInstance.insertStorageRecord(storageModel: model1)
         if insertResult == true {
-            NSLog("Insert storage record SUCCESSED")
+            Log.debug?.message("Insert storage record Successed")
         } else {
-            print("Insert storage record FAILED")
+            Log.debug?.message("Insert storage record FAILED")
         }
         
         self.navigationController?.popViewController(animated: true)
