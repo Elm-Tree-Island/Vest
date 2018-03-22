@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 
 class MCStorageRecordModel: NSObject {
-    var recordId:NSString! = ""                     // 货物ID
+    var recordId:Int64 = 0                          // 货物ID
 
     var name:String! = ""                           // 货品名称
     
@@ -18,8 +18,8 @@ class MCStorageRecordModel: NSObject {
     var price:Double? = 0.0                         // 售价
     var otherCost:Double? = 0.0                     // 其他费用
     
-    var totalCount:UInt = 0                         // 进货总数
-    var soldCount:UInt = 0                          // 已售数量
+    var totalCount:Int64 = 0                         // 进货总数
+    var soldCount:Int64 = 0                          // 已售数量
     
     var picUrl:String! = ""                         // 货物图片
     var time:Date! = Date()                         // 进货时间

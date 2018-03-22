@@ -24,6 +24,21 @@ class MCAddStorageViewController: UIViewController {
     
     @objc func onSaveStorage() {
         // TODO: 数据格式验证 & 保存数据库
+        // TEST Data
+        let model1 = MCStorageRecordModel()
+        model1.price = 1.3
+        model1.cost = 1.02
+        model1.totalCount = 200
+        model1.soldCount = 120
+        model1.name = "佑天兰面膜（金色）"
+        model1.time = Date()
+        
+        let insertResult = MCDatabaseHelper.sharedInstance.insertStorageRecord(storageModel: model1)
+        if insertResult == true {
+            NSLog("Insert storage record SUCCESSED")
+        } else {
+            print("Insert storage record FAILED")
+        }
         
         self.navigationController?.popViewController(animated: true)
     }

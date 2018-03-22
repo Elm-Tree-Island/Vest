@@ -10,7 +10,7 @@ import UIKit
 
 class MCStorageRecordListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    var arrDatasource:[MCStorageRecordModel]?
+    var arrDatasource:NSArray?
     
     @IBOutlet weak var tableViewStorageRecords: UITableView!
     
@@ -19,28 +19,16 @@ class MCStorageRecordListViewController: UIViewController, UITableViewDataSource
         
         self.tabBarController?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped(_:)))
         
-        // TEST Data
-        let model1 = MCStorageRecordModel()
-        model1.price = 1.3
-        model1.cost = 1.02
-        model1.totalCount = 200
-        model1.soldCount = 120
-        model1.name = "佑天兰面膜（金色）"
-        model1.time = Date()
-        
-        self.arrDatasource = [model1, model1, model1];
-        
         // Setup UI
         self.setupTableview()
-        
-        // FIXME: Test Create Table -> Storage
-        let helper = MCDatabaseHelper()
-        helper.createTableStorage()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.navigationItem.title = "Storage Record"
+        
+        self.arrDatasource = MCDatabaseHelper.sharedInstance.getAllStorageRecord()
+        self.tableViewStorageRecords.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -67,7 +55,7 @@ class MCStorageRecordListViewController: UIViewController, UITableViewDataSource
     
     // MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (self.arrDatasource?.count)!
+        return self.arrDatasource == nil ? 0 : (self.arrDatasource?.count)!
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -76,7 +64,7 @@ class MCStorageRecordListViewController: UIViewController, UITableViewDataSource
         
         // TODO: INIT Data
         let cellStorage = cell as? StorageRecordTableViewCell
-        cellStorage?.configWithModel(self.arrDatasource![indexPath.row])
+        cellStorage?.configWithModel(self.arrDatasource?.object(at: indexPath.row) as! MCStorageRecordModel)
         
         cell.selectionStyle = .none
 
