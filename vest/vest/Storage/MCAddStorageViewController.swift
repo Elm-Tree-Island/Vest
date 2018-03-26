@@ -19,7 +19,8 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
 
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .done, target: self, action: #selector(onSaveStorage))
         
-        self.ivProductPic.layer.shadowColor = UIColor(hexString: "#9B9B9B")?.cgColor        
+        self.ivProductPic.layer.shadowColor = UIColor(hexString: "#9B9B9B")?.cgColor
+        self.tableView.tableFooterView = UIView(frame: CGRect.zero)
     }
 
     override func didReceiveMemoryWarning() {
