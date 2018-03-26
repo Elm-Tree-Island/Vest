@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MCAddStorageViewController" customModule="VEST" customModuleProvider="target">
             <connections>
                 <outlet property="ivProductPic" destination="FcV-MH-nZR" id="ZSO-gd-xfN"/>
+                <outlet property="tableView" destination="Efh-4i-mYl" id="C4B-5V-1V4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -46,6 +47,10 @@
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Efh-4i-mYl">
                     <rect key="frame" x="0.0" y="148" width="375" height="519"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="qQx-Cr-E10"/>
+                        <outlet property="delegate" destination="-1" id="Pt0-XJ-snc"/>
+                    </connections>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
