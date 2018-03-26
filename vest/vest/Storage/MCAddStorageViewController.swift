@@ -10,12 +10,17 @@ import UIKit
 import CleanroomLogger
 
 class MCAddStorageViewController: MCBaseViewController {
-
+    @IBOutlet weak var ivProductPic: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Add"
 
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .done, target: self, action: #selector(onSaveStorage))
+        
+        self.ivProductPic.layer.shadowColor = UIColor(hexString: "#9B9B9B")?.cgColor
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
