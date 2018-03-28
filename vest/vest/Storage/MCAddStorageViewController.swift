@@ -10,15 +10,21 @@ import UIKit
 import CleanroomLogger
 
 class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var modelToSave:MCStorageRecordModel?
+    
+    
     @IBOutlet weak var ivProductPic: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Add"
+        
+        // Init Data
+        self.modelToSave = MCStorageRecordModel()
 
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .done, target: self, action: #selector(onSaveStorage))
-        
         self.ivProductPic.layer.shadowColor = UIColor(hexString: "#9B9B9B")?.cgColor
         self.tableView.tableFooterView = UIView(frame: CGRect.zero)
     }
@@ -33,17 +39,11 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
     
     // MARK: - Event Handling
     @objc func onSaveStorage() {
-        // TODO: 数据格式验证 & 保存数据库
-        // TEST Data
-        let model1 = MCStorageRecordModel()
-        model1.price = 1.3
-        model1.cost = 1.02
-        model1.totalCount = 200
-        model1.soldCount = 120
-        model1.name = "佑天兰面膜（金色）"
-        model1.time = Date()
-        
-        let insertResult = MCDatabaseHelper.sharedInstance.insertStorageRecord(storageModel: model1)
+        if self.modelToSave == nil {
+            self.modelToSave = MCStorageRecordModel()
+        }
+        // Save the model
+        let insertResult = MCDatabaseHelper.sharedInstance.insertStorageRecord(storageModel: self.modelToSave!)
         if insertResult == true {
             Log.debug?.message("Insert storage record Successed")
         } else {
@@ -55,7 +55,34 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
 
     // MARK: - UITableViewDelegate Methods
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        Log.debug?.message("点击了cell, \(indexPath.row)")
+        let cell = tableView.cellForRow(at: indexPath)
         
+        switch indexPath.row {
+        case 0:     // 名称
+            let alertController = UIAlertController(title: "", message: "请输入商品名字", preferredStyle: .alert)
+            alertController.addTextField(configurationHandler: { (textField) in
+                textField.placeholder = "请输入商品名称"
+                
+            })
+            let btnCancel = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+            let btnOK = UIAlertAction(title: "确定", style: .default, handler: { (action) in
+                let strInput = alertController.textFields?.first?.text
+                
+                if strInput?.isEmpty == false {
+                    self.modelToSave?.name = strInput
+                    cell?.detailTextLabel?.text = strInput
+                } else {
+                    Log.debug?.message("名字不能为空")
+                }
+            })
+            
+            alertController.addAction(btnCancel)
+            alertController.addAction(btnOK)
+            self.present(alertController, animated: true, completion: nil)
+        default:
+            break;
+        }
     }
     
     // MARK: - UITableViewDataSource Methods
@@ -72,7 +99,7 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
             switch indexPath.row {
             case 0:
                 cell?.textLabel?.text = "名称"
-                cell?.detailTextLabel?.text = "xxx"
+                cell?.detailTextLabel?.text = self.modelToSave?.name;
             case 1:
                 cell?.textLabel?.text = "分类"
                 
@@ -96,7 +123,6 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
             }
             
             cell?.accessoryType = .disclosureIndicator
-            cell?.selectionStyle = .none
         }
 
         return cell!
