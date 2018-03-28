@@ -80,6 +80,27 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
             alertController.addAction(btnCancel)
             alertController.addAction(btnOK)
             self.present(alertController, animated: true, completion: nil)
+            
+        case 4:         // 数量
+            let alertController = UIAlertController(title: "", message: "请输入数量", preferredStyle: .actionSheet)
+            let btnCancel = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+            let btnOK = UIAlertAction(title: "确定", style: .default, handler: { (action) in
+                let strInput = alertController.textFields?.first?.text
+                
+                if strInput?.isEmpty == false {
+//                    self.modelToSave?.totalCount = Int(strInput!)
+                    cell?.detailTextLabel?.text = strInput
+                } else {
+                    Log.debug?.message("数量不能为空")
+                }
+            })
+            
+            alertController.addAction(btnCancel)
+            alertController.addAction(btnOK)
+            self.present(alertController, animated: true, completion: nil)
+            
+            break
+            
         default:
             break;
         }
