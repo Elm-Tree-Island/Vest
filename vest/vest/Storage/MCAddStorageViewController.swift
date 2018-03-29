@@ -8,11 +8,11 @@
 
 import UIKit
 import CleanroomLogger
+import ReactiveCocoa
 
 class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UITableViewDataSource {
     
     var modelToSave:MCStorageRecordModel?
-    
     
     @IBOutlet weak var ivProductPic: UIImageView!
     @IBOutlet weak var tableView: UITableView!
@@ -81,14 +81,48 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
             alertController.addAction(btnOK)
             self.present(alertController, animated: true, completion: nil)
             
-        case 4:         // 数量
-            let alertController = UIAlertController(title: "", message: "请输入数量", preferredStyle: .actionSheet)
+        case 1:                 // 分类
+            // TODO: 后续添加分类
+            break
+            
+        case 2:                 // 渠道
+            // TODO: 选择渠道
+            break
+            
+        case 3:                 // 进货价格
+            let alertController = UIAlertController(title: "", message: "请输入进货单价", preferredStyle: .alert)
             let btnCancel = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+            alertController.addTextField(configurationHandler: { (textField) in
+                textField.placeholder = "请输入进货单价"
+                textField.keyboardType = .decimalPad
+            })
             let btnOK = UIAlertAction(title: "确定", style: .default, handler: { (action) in
                 let strInput = alertController.textFields?.first?.text
                 
                 if strInput?.isEmpty == false {
-//                    self.modelToSave?.totalCount = Int(strInput!)
+                    self.modelToSave?.cost = Double(strInput!)!
+                    cell?.detailTextLabel?.text = strInput
+                } else {
+                    Log.debug?.message("进货单价不能为空")
+                }
+            })
+            
+            alertController.addAction(btnCancel)
+            alertController.addAction(btnOK)
+            self.present(alertController, animated: true, completion: nil)
+            
+        case 4:         // 数量
+            let alertController = UIAlertController(title: "", message: "请输入数量", preferredStyle: .alert)
+            let btnCancel = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+            alertController.addTextField(configurationHandler: { (textField) in
+                textField.placeholder = "请输入数量"
+                textField.keyboardType = .numberPad
+            })
+            let btnOK = UIAlertAction(title: "确定", style: .default, handler: { (action) in
+                let strInput = alertController.textFields?.first?.text
+                
+                if strInput?.isEmpty == false {
+                    self.modelToSave?.totalCount = Int64(strInput!)!
                     cell?.detailTextLabel?.text = strInput
                 } else {
                     Log.debug?.message("数量不能为空")
@@ -99,7 +133,45 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
             alertController.addAction(btnOK)
             self.present(alertController, animated: true, completion: nil)
             
-            break
+        case 5:         // 其他成本
+            let alertController = UIAlertController(title: "", message: "请输入其他成本", preferredStyle: .alert)
+            let btnCancel = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+            alertController.addTextField(configurationHandler: { (textField) in
+                textField.placeholder = "请输入其他成本"
+                textField.keyboardType = .decimalPad
+            })
+            let btnOK = UIAlertAction(title: "确定", style: .default, handler: { (action) in
+                let strInput = alertController.textFields?.first?.text
+                
+                if strInput?.isEmpty == false {
+                    self.modelToSave?.otherCost = Double(strInput!)!
+                    cell?.detailTextLabel?.text = strInput
+                }
+            })
+            
+            alertController.addAction(btnCancel)
+            alertController.addAction(btnOK)
+            self.present(alertController, animated: true, completion: nil)
+            
+        case 6:             // 销售单价
+            let alertController = UIAlertController(title: "", message: "", preferredStyle: .alert)
+            let btnCancel = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+            alertController.addTextField(configurationHandler: { (textField) in
+                textField.placeholder = "请输入销售单价"
+                textField.keyboardType = .decimalPad
+            })
+            let btnOK = UIAlertAction(title: "确定", style: .default, handler: { (action) in
+                let strInput = alertController.textFields?.first?.text
+                
+                if strInput?.isEmpty == false {
+                    self.modelToSave?.price = Double(strInput!)!
+                    cell?.detailTextLabel?.text = strInput
+                }
+            })
+            
+            alertController.addAction(btnCancel)
+            alertController.addAction(btnOK)
+            self.present(alertController, animated: true, completion: nil)
             
         default:
             break;
@@ -141,6 +213,13 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
                 
             default:
                 cell?.textLabel?.text = "单品毛利(RMB)"
+                let totalCount:Int = Int((self.modelToSave?.totalCount)!)
+                var singleGrossProfit:Double = 0
+                if totalCount != 0 {
+                    let prifitSingle:Double = (self.modelToSave?.price)! - (self.modelToSave?.cost)!;
+                    singleGrossProfit = (prifitSingle * Double(totalCount) - (self.modelToSave?.otherCost)!) / Double(totalCount);
+                }
+                cell?.detailTextLabel?.text = "\(singleGrossProfit)"
             }
             
             cell?.accessoryType = .disclosureIndicator
