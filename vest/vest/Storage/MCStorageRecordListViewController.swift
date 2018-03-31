@@ -74,6 +74,7 @@ class MCStorageRecordListViewController: MCBaseViewController, UITableViewDataSo
     // MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailVC = MCStorageRecordDetailViewController()
+        detailVC.productModel = self.arrDatasource?.object(at: indexPath.row) as! MCStorageRecordModel
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
 }
