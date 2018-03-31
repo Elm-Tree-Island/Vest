@@ -8,7 +8,6 @@
 
 import UIKit
 import CleanroomLogger
-import ReactiveCocoa
 
 class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -65,13 +64,14 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
                 textField.placeholder = "请输入商品名称"
                 
             })
+            
             let btnCancel = UIAlertAction(title: "取消", style: .cancel, handler: nil)
             let btnOK = UIAlertAction(title: "确定", style: .default, handler: { (action) in
                 let strInput = alertController.textFields?.first?.text
                 
                 if strInput?.isEmpty == false {
-                    self.modelToSave?.name = strInput
                     cell?.detailTextLabel?.text = strInput
+                    self.modelToSave?.name = strInput
                 } else {
                     Log.debug?.message("名字不能为空")
                 }
