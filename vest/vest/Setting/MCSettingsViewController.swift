@@ -33,7 +33,6 @@ class MCSettingsViewController: MCBaseViewController, UITableViewDataSource, UIT
         self.tableview .register(UITableViewCell.self, forCellReuseIdentifier: "mc_setting_tableview_cell")
     }
     
-    
     // MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ((self.tableviewDatasource?[section] as! NSArray).count)
@@ -53,5 +52,30 @@ class MCSettingsViewController: MCBaseViewController, UITableViewDataSource, UIT
         cell.accessoryType = .disclosureIndicator
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.section {
+        case 0:         // 管理类
+            switch indexPath.row {
+            case 0:         // 类别管理
+                let categoryManageVC = MCCategoryManageViewController()
+                self.navigationController?.pushViewController(categoryManageVC, animated: true)
+
+                break
+                
+            default:
+                break
+            }
+            break
+            
+        case 1:         // 关于类
+            
+            break
+            
+        default:
+            // DO NOTHING
+            break
+        }
     }
 }
