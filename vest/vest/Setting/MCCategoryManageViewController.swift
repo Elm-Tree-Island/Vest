@@ -14,7 +14,7 @@ class MCCategoryManageViewController: MCBaseViewController {
         super.viewDidLoad()
         self.title = "类别管理"
         
-        self.tabBarController?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped(_:)))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped(_:)))
         
     }
 
