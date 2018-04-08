@@ -25,7 +25,7 @@ class MCStorageRecordListViewController: MCBaseViewController, UITableViewDataSo
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.tabBarController?.navigationItem.title = "Storage Record"
+        self.tabBarController?.navigationItem.title = "Storage"
         
         self.arrDatasource = MCDatabaseHelper.sharedInstance.getAllStorageRecord()
         self.tableViewStorageRecords.reloadData()
@@ -74,7 +74,7 @@ class MCStorageRecordListViewController: MCBaseViewController, UITableViewDataSo
     // MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailVC = MCStorageRecordDetailViewController()
-        detailVC.productModel = self.arrDatasource?.object(at: indexPath.row) as! MCStorageRecordModel
+        detailVC.productModel = self.arrDatasource?.object(at: indexPath.row) as? MCStorageRecordModel
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
 }

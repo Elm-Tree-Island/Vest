@@ -31,6 +31,7 @@
 		4D52FF4720639B7700ABB17A /* CleanroomLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D52FF4620639B7700ABB17A /* CleanroomLogger.framework */; };
 		4D52FF4B20639D0E00ABB17A /* MCBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D52FF4A20639D0E00ABB17A /* MCBaseViewController.swift */; };
 		4D52FF4F2063D40A00ABB17A /* SwiftHEXColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D52FF4D2063D40900ABB17A /* SwiftHEXColors.swift */; };
+		4DAB14AE2079F391007CBD54 /* MCSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB14AD2079F391007CBD54 /* MCSettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -76,6 +77,7 @@
 		4D52FF4620639B7700ABB17A /* CleanroomLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CleanroomLogger.framework; path = ../Carthage/Build/iOS/CleanroomLogger.framework; sourceTree = "<group>"; };
 		4D52FF4A20639D0E00ABB17A /* MCBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCBaseViewController.swift; sourceTree = "<group>"; };
 		4D52FF4D2063D40900ABB17A /* SwiftHEXColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftHEXColors.swift; sourceTree = "<group>"; };
+		4DAB14AD2079F391007CBD54 /* MCSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCSettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 		4D2A45C120596D8600A2BE99 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				4DAB14AD2079F391007CBD54 /* MCSettingsViewController.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				4D52FF4B20639D0E00ABB17A /* MCBaseViewController.swift in Sources */,
 				4D2A45C7205974EE00A2BE99 /* MCSellRecordListViewController.swift in Sources */,
 				4D1C3A51205223470014DDE9 /* AppDelegate.swift in Sources */,
+				4DAB14AE2079F391007CBD54 /* MCSettingsViewController.swift in Sources */,
 				4D2A45EF2060036F00A2BE99 /* MCStorageRecordDetailViewController.swift in Sources */,
 				4D52FF3A206208A200ABB17A /* MCDatabaseHelper.swift in Sources */,
 				4D2A45C420596E3500A2BE99 /* MCStorageRecordListViewController.swift in Sources */,
