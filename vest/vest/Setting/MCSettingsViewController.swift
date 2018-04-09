@@ -17,7 +17,7 @@ class MCSettingsViewController: MCBaseViewController, UITableViewDataSource, UIT
         super.viewDidLoad()
         self.tabBarController?.navigationItem.title = "更多"
 
-        self.tableviewDatasource = [["类别管理"],
+        self.tableviewDatasource = [["类别管理", "渠道管理"],
                                     ["隐私声明", "关于"]];
         // Setup UI
         self.setupTableview()
@@ -59,10 +59,13 @@ class MCSettingsViewController: MCBaseViewController, UITableViewDataSource, UIT
         case 0:         // 管理类
             switch indexPath.row {
             case 0:         // 类别管理
-                let categoryManageVC = MCCategoryManageViewController()
-                self.navigationController?.pushViewController(categoryManageVC, animated: true)
+                self.navigationController?.pushViewController(MCCategoryManageViewController(), animated: true)
 
                 break
+                
+            case 1:         // 渠道管理
+                let controller = MCChannelManagementViewController();
+                self.navigationController?.pushViewController(MCChannelManagementViewController(), animated: true);
                 
             default:
                 break

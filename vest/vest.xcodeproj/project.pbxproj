@@ -34,6 +34,8 @@
 		4DAB14AE2079F391007CBD54 /* MCSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB14AD2079F391007CBD54 /* MCSettingsViewController.swift */; };
 		4DAB14B1207A082D007CBD54 /* MCCategoryManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB14AF207A082D007CBD54 /* MCCategoryManageViewController.swift */; };
 		4DAB14B2207A082D007CBD54 /* MCCategoryManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DAB14B0207A082D007CBD54 /* MCCategoryManageViewController.xib */; };
+		4DC2826B207B069100462A2D /* MCChannelManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC28269207B069100462A2D /* MCChannelManagementViewController.swift */; };
+		4DC2826C207B069100462A2D /* MCChannelManagementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DC2826A207B069100462A2D /* MCChannelManagementViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -82,6 +84,8 @@
 		4DAB14AD2079F391007CBD54 /* MCSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCSettingsViewController.swift; sourceTree = "<group>"; };
 		4DAB14AF207A082D007CBD54 /* MCCategoryManageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCCategoryManageViewController.swift; sourceTree = "<group>"; };
 		4DAB14B0207A082D007CBD54 /* MCCategoryManageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCCategoryManageViewController.xib; sourceTree = "<group>"; };
+		4DC28269207B069100462A2D /* MCChannelManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCChannelManagementViewController.swift; sourceTree = "<group>"; };
+		4DC2826A207B069100462A2D /* MCChannelManagementViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCChannelManagementViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +173,8 @@
 				4DAB14AD2079F391007CBD54 /* MCSettingsViewController.swift */,
 				4DAB14AF207A082D007CBD54 /* MCCategoryManageViewController.swift */,
 				4DAB14B0207A082D007CBD54 /* MCCategoryManageViewController.xib */,
+				4DC28269207B069100462A2D /* MCChannelManagementViewController.swift */,
+				4DC2826A207B069100462A2D /* MCChannelManagementViewController.xib */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -301,6 +307,7 @@
 			files = (
 				4D2A45D6205BB69D00A2BE99 /* Main.storyboard in Resources */,
 				4D2A45F02060036F00A2BE99 /* MCStorageRecordDetailViewController.xib in Resources */,
+				4DC2826C207B069100462A2D /* MCChannelManagementViewController.xib in Resources */,
 				4D1C3A5A205223470014DDE9 /* Assets.xcassets in Resources */,
 				4D2A45EC206001D600A2BE99 /* MCAddStorageViewController.xib in Resources */,
 				4D2A45D4205A68D700A2BE99 /* StorageRecordTableViewCell.xib in Resources */,
@@ -336,6 +343,7 @@
 				4D2A45D3205A68D700A2BE99 /* StorageRecordTableViewCell.swift in Sources */,
 				4D2A45EB206001D600A2BE99 /* MCAddStorageViewController.swift in Sources */,
 				4D52FF4B20639D0E00ABB17A /* MCBaseViewController.swift in Sources */,
+				4DC2826B207B069100462A2D /* MCChannelManagementViewController.swift in Sources */,
 				4D2A45C7205974EE00A2BE99 /* MCSellRecordListViewController.swift in Sources */,
 				4D1C3A51205223470014DDE9 /* AppDelegate.swift in Sources */,
 				4DAB14AE2079F391007CBD54 /* MCSettingsViewController.swift in Sources */,
