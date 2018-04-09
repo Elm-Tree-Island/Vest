@@ -29,6 +29,7 @@ class MCCategoryManageViewController: MCBaseViewController, UITableViewDelegate,
         self.tableview.register(UITableViewCell.self, forCellReuseIdentifier: "mc_setting_tableview_cell")
         self.tableview.delegate = self
         self.tableview.dataSource = self
+        self.tableview.tableFooterView = UIView()
     }
 
     // MARK: - Event Handler

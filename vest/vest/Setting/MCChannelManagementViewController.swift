@@ -30,6 +30,7 @@ class MCChannelManagementViewController: MCBaseViewController, UITableViewDataSo
         self.tableview.register(UITableViewCell.self, forCellReuseIdentifier: "mc_setting_tableview_cell")
         self.tableview.delegate = self
         self.tableview.dataSource = self
+        self.tableview.tableFooterView = UIView()
     }
     
     // MARK: - Event Handler
@@ -44,7 +45,7 @@ class MCChannelManagementViewController: MCBaseViewController, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableview.dequeueReusableCell(withIdentifier: "mc_setting_tableview_cell", for: indexPath)
-        cell.textLabel?.text = "arrRows[indexPath.row] as? String"
+        cell.textLabel?.text = "渠道数据123"
         
         cell.selectionStyle = .none
         cell.accessoryType = .disclosureIndicator
