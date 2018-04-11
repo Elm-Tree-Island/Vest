@@ -62,11 +62,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var configs = [LogConfiguration]()
         
         // Xcode config
-        configs.append(XcodeLogConfiguration())
+        let xcodeLogConfig = XcodeLogConfiguration(minimumSeverity: .debug, debugMode: true, verboseDebugMode: false, stdStreamsMode: .useAsFallback, mimicOSLogOutput: true, showCallSite: true, filters: [])
+        configs.append(xcodeLogConfig)
         
         // File log config
         let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-        let fileLogCfg = RotatingLogFileConfiguration(minimumSeverity: .info,
+        let fileLogCfg = RotatingLogFileConfiguration(minimumSeverity: .debug,
                                                       daysToKeep: 7,
                                                       directoryPath: documentPath + "/CleanroomLogger/")
 
