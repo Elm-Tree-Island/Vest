@@ -9,28 +9,34 @@
 /* Begin PBXBuildFile section */
 		4D1C3A51205223470014DDE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C3A50205223470014DDE9 /* AppDelegate.swift */; };
 		4D1C3A5A205223470014DDE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D1C3A59205223470014DDE9 /* Assets.xcassets */; };
-		4D1C3AA620558CD30014DDE9 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1C3AA320558CD30014DDE9 /* ReactiveSwift.framework */; };
-		4D1C3AA820558CD90014DDE9 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1C3AA220558CD20014DDE9 /* ReactiveCocoa.framework */; };
-		4D1C3AA920558CD90014DDE9 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1C3AA220558CD20014DDE9 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4D1C3AAB20558CD90014DDE9 /* ReactiveSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1C3AA320558CD30014DDE9 /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D2A45C420596E3500A2BE99 /* MCStorageRecordListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2A45C220596E3500A2BE99 /* MCStorageRecordListViewController.swift */; };
 		4D2A45C7205974EE00A2BE99 /* MCSellRecordListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2A45C6205974EE00A2BE99 /* MCSellRecordListViewController.swift */; };
 		4D2A45D3205A68D700A2BE99 /* StorageRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2A45D1205A68D700A2BE99 /* StorageRecordTableViewCell.swift */; };
 		4D2A45D4205A68D700A2BE99 /* StorageRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D2A45D2205A68D700A2BE99 /* StorageRecordTableViewCell.xib */; };
 		4D2A45D6205BB69D00A2BE99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D1C3A56205223470014DDE9 /* Main.storyboard */; };
 		4D2A45D8205BB7DD00A2BE99 /* MCStorageRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2A45D7205BB7DD00A2BE99 /* MCStorageRecordModel.swift */; };
-		4D2A45DA205BBAF400A2BE99 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2A45D9205BBAF400A2BE99 /* Result.framework */; };
-		4D2A45DB205BBB0500A2BE99 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2A45D9205BBAF400A2BE99 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D2A45EB206001D600A2BE99 /* MCAddStorageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2A45E9206001D600A2BE99 /* MCAddStorageViewController.swift */; };
 		4D2A45EC206001D600A2BE99 /* MCAddStorageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D2A45EA206001D600A2BE99 /* MCAddStorageViewController.xib */; };
 		4D2A45EF2060036F00A2BE99 /* MCStorageRecordDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2A45ED2060036F00A2BE99 /* MCStorageRecordDetailViewController.swift */; };
 		4D2A45F02060036F00A2BE99 /* MCStorageRecordDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D2A45EE2060036F00A2BE99 /* MCStorageRecordDetailViewController.xib */; };
-		4D52FF372061FB0A00ABB17A /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D52FF362061FB0A00ABB17A /* SQLite.framework */; };
 		4D52FF3A206208A200ABB17A /* MCDatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D52FF39206208A200ABB17A /* MCDatabaseHelper.swift */; };
-		4D52FF3F2062521900ABB17A /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D52FF362061FB0A00ABB17A /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4D52FF4720639B7700ABB17A /* CleanroomLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D52FF4620639B7700ABB17A /* CleanroomLogger.framework */; };
 		4D52FF4B20639D0E00ABB17A /* MCBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D52FF4A20639D0E00ABB17A /* MCBaseViewController.swift */; };
 		4D52FF4F2063D40A00ABB17A /* SwiftHEXColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D52FF4D2063D40900ABB17A /* SwiftHEXColors.swift */; };
+		4D775B86207DE3C80097CDD9 /* CleanroomLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D52FF4620639B7700ABB17A /* CleanroomLogger.framework */; };
+		4D775B87207DE3C80097CDD9 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D52FF362061FB0A00ABB17A /* SQLite.framework */; };
+		4D775B88207DE3C80097CDD9 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2A45DC205BBB2A00A2BE99 /* ReactiveSwift.framework */; };
+		4D775B89207DE3C80097CDD9 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2A45D9205BBAF400A2BE99 /* Result.framework */; };
+		4D775B8A207DE3C80097CDD9 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1C3AA220558CD20014DDE9 /* ReactiveCocoa.framework */; };
+		4D775B8B207DE3E70097CDD9 /* CleanroomLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D52FF4620639B7700ABB17A /* CleanroomLogger.framework */; };
+		4D775B8C207DE3E70097CDD9 /* CleanroomLogger.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D52FF4620639B7700ABB17A /* CleanroomLogger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4D775B8D207DE3E70097CDD9 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D52FF362061FB0A00ABB17A /* SQLite.framework */; };
+		4D775B8E207DE3E70097CDD9 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D52FF362061FB0A00ABB17A /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4D775B8F207DE3E70097CDD9 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2A45DC205BBB2A00A2BE99 /* ReactiveSwift.framework */; };
+		4D775B90207DE3E70097CDD9 /* ReactiveSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2A45DC205BBB2A00A2BE99 /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4D775B91207DE3E70097CDD9 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2A45D9205BBAF400A2BE99 /* Result.framework */; };
+		4D775B92207DE3E70097CDD9 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2A45D9205BBAF400A2BE99 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4D775B93207DE3E70097CDD9 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1C3AA220558CD20014DDE9 /* ReactiveCocoa.framework */; };
+		4D775B94207DE3E70097CDD9 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1C3AA220558CD20014DDE9 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4DAB14AE2079F391007CBD54 /* MCSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB14AD2079F391007CBD54 /* MCSettingsViewController.swift */; };
 		4DAB14B1207A082D007CBD54 /* MCCategoryManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB14AF207A082D007CBD54 /* MCCategoryManageViewController.swift */; };
 		4DAB14B2207A082D007CBD54 /* MCCategoryManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DAB14B0207A082D007CBD54 /* MCCategoryManageViewController.xib */; };
@@ -39,19 +45,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		4D1C3A77205585B60014DDE9 /* Embed Frameworks */ = {
+		4D775B95207DE3E70097CDD9 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 8;
+			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4D52FF3F2062521900ABB17A /* SQLite.framework in Embed Frameworks */,
-				4D2A45DB205BBB0500A2BE99 /* Result.framework in Embed Frameworks */,
-				4D1C3AA920558CD90014DDE9 /* ReactiveCocoa.framework in Embed Frameworks */,
-				4D1C3AAB20558CD90014DDE9 /* ReactiveSwift.framework in Embed Frameworks */,
+				4D775B8E207DE3E70097CDD9 /* SQLite.framework in Embed Frameworks */,
+				4D775B8C207DE3E70097CDD9 /* CleanroomLogger.framework in Embed Frameworks */,
+				4D775B90207DE3E70097CDD9 /* ReactiveSwift.framework in Embed Frameworks */,
+				4D775B92207DE3E70097CDD9 /* Result.framework in Embed Frameworks */,
+				4D775B94207DE3E70097CDD9 /* ReactiveCocoa.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -63,7 +70,6 @@
 		4D1C3A5C205223470014DDE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D1C3A5E205223470014DDE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D1C3AA220558CD20014DDE9 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = ../Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
-		4D1C3AA320558CD30014DDE9 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = ../Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
 		4D2A45C220596E3500A2BE99 /* MCStorageRecordListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCStorageRecordListViewController.swift; sourceTree = "<group>"; };
 		4D2A45C6205974EE00A2BE99 /* MCSellRecordListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCSellRecordListViewController.swift; sourceTree = "<group>"; };
 		4D2A45D1205A68D700A2BE99 /* StorageRecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageRecordTableViewCell.swift; sourceTree = "<group>"; };
@@ -77,7 +83,6 @@
 		4D2A45EE2060036F00A2BE99 /* MCStorageRecordDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCStorageRecordDetailViewController.xib; sourceTree = "<group>"; };
 		4D52FF362061FB0A00ABB17A /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = ../Carthage/Build/iOS/SQLite.framework; sourceTree = "<group>"; };
 		4D52FF39206208A200ABB17A /* MCDatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCDatabaseHelper.swift; sourceTree = "<group>"; };
-		4D52FF4120629D7900ABB17A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		4D52FF4620639B7700ABB17A /* CleanroomLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CleanroomLogger.framework; path = ../Carthage/Build/iOS/CleanroomLogger.framework; sourceTree = "<group>"; };
 		4D52FF4A20639D0E00ABB17A /* MCBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCBaseViewController.swift; sourceTree = "<group>"; };
 		4D52FF4D2063D40900ABB17A /* SwiftHEXColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftHEXColors.swift; sourceTree = "<group>"; };
@@ -93,11 +98,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D52FF372061FB0A00ABB17A /* SQLite.framework in Frameworks */,
-				4D1C3AA620558CD30014DDE9 /* ReactiveSwift.framework in Frameworks */,
-				4D52FF4720639B7700ABB17A /* CleanroomLogger.framework in Frameworks */,
-				4D1C3AA820558CD90014DDE9 /* ReactiveCocoa.framework in Frameworks */,
-				4D2A45DA205BBAF400A2BE99 /* Result.framework in Frameworks */,
+				4D775B8D207DE3E70097CDD9 /* SQLite.framework in Frameworks */,
+				4D775B86207DE3C80097CDD9 /* CleanroomLogger.framework in Frameworks */,
+				4D775B87207DE3C80097CDD9 /* SQLite.framework in Frameworks */,
+				4D775B91207DE3E70097CDD9 /* Result.framework in Frameworks */,
+				4D775B8F207DE3E70097CDD9 /* ReactiveSwift.framework in Frameworks */,
+				4D775B88207DE3C80097CDD9 /* ReactiveSwift.framework in Frameworks */,
+				4D775B8B207DE3E70097CDD9 /* CleanroomLogger.framework in Frameworks */,
+				4D775B89207DE3C80097CDD9 /* Result.framework in Frameworks */,
+				4D775B8A207DE3C80097CDD9 /* ReactiveCocoa.framework in Frameworks */,
+				4D775B93207DE3E70097CDD9 /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,11 +219,9 @@
 			children = (
 				4D52FF4620639B7700ABB17A /* CleanroomLogger.framework */,
 				4D52FF362061FB0A00ABB17A /* SQLite.framework */,
-				4D1C3AA320558CD30014DDE9 /* ReactiveSwift.framework */,
 				4D2A45DC205BBB2A00A2BE99 /* ReactiveSwift.framework */,
 				4D2A45D9205BBAF400A2BE99 /* Result.framework */,
 				4D1C3AA220558CD20014DDE9 /* ReactiveCocoa.framework */,
-				4D52FF4120629D7900ABB17A /* libsqlite3.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -254,8 +262,8 @@
 				4D1C3A49205223470014DDE9 /* Sources */,
 				4D1C3A4A205223470014DDE9 /* Frameworks */,
 				4D1C3A4B205223470014DDE9 /* Resources */,
-				4D1C3A77205585B60014DDE9 /* Embed Frameworks */,
 				4D1C3A782055865A0014DDE9 /* ShellScript */,
+				4D775B95207DE3E70097CDD9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -489,15 +497,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ENNJNCUK8H;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS/**";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = vest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks \"$(SRCROOT)/../Carthage/Build/iOS\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mark.vest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -507,15 +517,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ENNJNCUK8H;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS/**";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = vest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks \"$(SRCROOT)/../Carthage/Build/iOS\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mark.vest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
