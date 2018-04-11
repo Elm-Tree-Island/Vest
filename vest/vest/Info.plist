@@ -26,10 +26,14 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+	<key>NSCameraUsageDescription</key>
+	<string>请求使用照相机</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>请求使用相册</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>不知道是什么描述</string>
 	<key>UIRequiredDeviceCapabilities</key>
-	<array>
-		<string>armv7</string>
-	</array>
+	<array/>
 	<key>UIStatusBarTintParameters</key>
 	<dict>
 		<key>UINavigationBar</key>

@@ -64,7 +64,6 @@ class MCSettingsViewController: MCBaseViewController, UITableViewDataSource, UIT
                 break
                 
             case 1:         // 渠道管理
-                let controller = MCChannelManagementViewController();
                 self.navigationController?.pushViewController(MCChannelManagementViewController(), animated: true);
                 
             default:

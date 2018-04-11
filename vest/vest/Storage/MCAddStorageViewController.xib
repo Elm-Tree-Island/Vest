@@ -22,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView opaque="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_default_pic" translatesAutoresizingMaskIntoConstraints="NO" id="FcV-MH-nZR">
+                <imageView opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_default_pic" translatesAutoresizingMaskIntoConstraints="NO" id="FcV-MH-nZR">
                     <rect key="frame" x="117" y="36" width="140" height="100"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>

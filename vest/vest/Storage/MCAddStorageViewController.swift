@@ -9,9 +9,10 @@
 import UIKit
 import CleanroomLogger
 
-class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UITableViewDataSource {
+class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var modelToSave:MCStorageRecordModel?
+    var imagePickerController:UIImagePickerController!
     
     @IBOutlet weak var ivProductPic: UIImageView!
     @IBOutlet weak var tableView: UITableView!
@@ -24,8 +25,16 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
         self.modelToSave = MCStorageRecordModel()
 
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .done, target: self, action: #selector(onSaveStorage))
+        
+        self.setupTableview()
+        self.setupImagePickerCtrler()
+        
+        // Add gesture recognizer
         self.ivProductPic.layer.shadowColor = UIColor(hexString: "#9B9B9B")?.cgColor
-        self.tableView.tableFooterView = UIView(frame: CGRect.zero)
+        let tapGR = UITapGestureRecognizer(target: self, action: #selector(onTapImageView))
+        self.ivProductPic.addGestureRecognizer(tapGR)
+        
+        self.setupImagePickerCtrler()
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,7 +43,22 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
     }
     
     // MARK: - UI Setup
+    func setupTableview() {
+        if self.tableView != nil {
+            self.tableView.tableFooterView = UIView(frame: CGRect.zero)
+        }
+    }
     
+    func setupImagePickerCtrler() {
+        if self.imagePickerController == nil {
+            self.imagePickerController = UIImagePickerController()
+            self.imagePickerController.delegate = self
+            self.imagePickerController.modalTransitionStyle = .flipHorizontal
+            self.imagePickerController.allowsEditing = true
+            self.imagePickerController.sourceType = .camera
+//            self.imagePickerController.mediaTypes =
+        }
+    }
     
     // MARK: - Event Handling
     @objc func onSaveStorage() {
@@ -50,6 +74,13 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
         }
         
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func onTapImageView() {
+        self.navigationController?.present(self.imagePickerController, animated: true, completion: {
+            
+        })
+        
     }
 
     // MARK: - UITableViewDelegate Methods
@@ -227,4 +258,30 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
 
         return cell!
     }
+    
+    // MARK: - UIImagePickerControllerDelegate
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        //获取媒体的类型
+        let mediaType = info[UIImagePickerControllerMediaType] as! String
+        
+        //如果媒体是照片
+        if mediaType == "public.image" as String {
+            //获取到拍摄的照片, UIImagePickerControllerEditedImage是经过剪裁过的照片,UIImagePickerControllerOriginalImage是原始的照片
+            let image = info[UIImagePickerControllerEditedImage] as! UIImage
+
+            //调用方法保存到图像库中
+            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+            self.ivProductPic.image = image
+            
+            // TODO: 获取图片ID或URL，保存到Model
+        }
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: - UINavigationControllerDelegate
+    
 }

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RealmSwift
 
 class MCStorageRecordModel: NSObject {
     var recordId:Int64 = 0                          // 货物ID
