@@ -50,20 +50,25 @@ class MCSettingsViewController: MCBaseViewController, UITableViewDataSource, UIT
             switch indexPath.row {
             case 0:         // 类别管理
                 self.navigationController?.pushViewController(MCCategoryManageViewController(), animated: true)
-
-                break
                 
             case 1:         // 渠道管理
-                self.navigationController?.pushViewController(MCChannelManagementViewController(), animated: true);
+                self.navigationController?.pushViewController(MCChannelManagementViewController(), animated: true)
                 
             default:
                 break
             }
-            break
             
-        case 1:         // 关于类
-            
-            break
+        case 1:         // 隐私声明、关于
+            switch indexPath.row {
+            case 0:         // 隐私声明
+                //                self.navigationController?.pushViewController(MCAboutMeViewController(), animated: true)
+                break
+            case 1:         // 关于
+                self.navigationController?.pushViewController(MCAboutMeViewController(), animated: true)
+                
+            default:
+                break
+            }
             
         default:
             // DO NOTHING

@@ -37,6 +37,8 @@
 		4D775B92207DE3E70097CDD9 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2A45D9205BBAF400A2BE99 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D775B93207DE3E70097CDD9 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1C3AA220558CD20014DDE9 /* ReactiveCocoa.framework */; };
 		4D775B94207DE3E70097CDD9 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1C3AA220558CD20014DDE9 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4D775B98207EF2900097CDD9 /* MCAboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D775B96207EF2900097CDD9 /* MCAboutMeViewController.swift */; };
+		4D775B99207EF2900097CDD9 /* MCAboutMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D775B97207EF2900097CDD9 /* MCAboutMeViewController.xib */; };
 		4DAB14AE2079F391007CBD54 /* MCSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB14AD2079F391007CBD54 /* MCSettingsViewController.swift */; };
 		4DAB14B1207A082D007CBD54 /* MCCategoryManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB14AF207A082D007CBD54 /* MCCategoryManageViewController.swift */; };
 		4DAB14B2207A082D007CBD54 /* MCCategoryManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DAB14B0207A082D007CBD54 /* MCCategoryManageViewController.xib */; };
@@ -86,6 +88,8 @@
 		4D52FF4620639B7700ABB17A /* CleanroomLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CleanroomLogger.framework; path = ../Carthage/Build/iOS/CleanroomLogger.framework; sourceTree = "<group>"; };
 		4D52FF4A20639D0E00ABB17A /* MCBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCBaseViewController.swift; sourceTree = "<group>"; };
 		4D52FF4D2063D40900ABB17A /* SwiftHEXColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftHEXColors.swift; sourceTree = "<group>"; };
+		4D775B96207EF2900097CDD9 /* MCAboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCAboutMeViewController.swift; sourceTree = "<group>"; };
+		4D775B97207EF2900097CDD9 /* MCAboutMeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCAboutMeViewController.xib; sourceTree = "<group>"; };
 		4DAB14AD2079F391007CBD54 /* MCSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCSettingsViewController.swift; sourceTree = "<group>"; };
 		4DAB14AF207A082D007CBD54 /* MCCategoryManageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCCategoryManageViewController.swift; sourceTree = "<group>"; };
 		4DAB14B0207A082D007CBD54 /* MCCategoryManageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCCategoryManageViewController.xib; sourceTree = "<group>"; };
@@ -185,6 +189,8 @@
 				4DAB14B0207A082D007CBD54 /* MCCategoryManageViewController.xib */,
 				4DC28269207B069100462A2D /* MCChannelManagementViewController.swift */,
 				4DC2826A207B069100462A2D /* MCChannelManagementViewController.xib */,
+				4D775B96207EF2900097CDD9 /* MCAboutMeViewController.swift */,
+				4D775B97207EF2900097CDD9 /* MCAboutMeViewController.xib */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -313,6 +319,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D775B99207EF2900097CDD9 /* MCAboutMeViewController.xib in Resources */,
 				4D2A45D6205BB69D00A2BE99 /* Main.storyboard in Resources */,
 				4D2A45F02060036F00A2BE99 /* MCStorageRecordDetailViewController.xib in Resources */,
 				4DC2826C207B069100462A2D /* MCChannelManagementViewController.xib in Resources */,
@@ -350,6 +357,7 @@
 				4D52FF4F2063D40A00ABB17A /* SwiftHEXColors.swift in Sources */,
 				4D2A45D3205A68D700A2BE99 /* StorageRecordTableViewCell.swift in Sources */,
 				4D2A45EB206001D600A2BE99 /* MCAddStorageViewController.swift in Sources */,
+				4D775B98207EF2900097CDD9 /* MCAboutMeViewController.swift in Sources */,
 				4D52FF4B20639D0E00ABB17A /* MCBaseViewController.swift in Sources */,
 				4DC2826B207B069100462A2D /* MCChannelManagementViewController.swift in Sources */,
 				4D2A45C7205974EE00A2BE99 /* MCSellRecordListViewController.swift in Sources */,
