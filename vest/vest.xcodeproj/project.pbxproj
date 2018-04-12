@@ -39,6 +39,8 @@
 		4D775B94207DE3E70097CDD9 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1C3AA220558CD20014DDE9 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D775B98207EF2900097CDD9 /* MCAboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D775B96207EF2900097CDD9 /* MCAboutMeViewController.swift */; };
 		4D775B99207EF2900097CDD9 /* MCAboutMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D775B97207EF2900097CDD9 /* MCAboutMeViewController.xib */; };
+		4D775B9C207EFA1A0097CDD9 /* MCPrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D775B9A207EFA1A0097CDD9 /* MCPrivacyViewController.swift */; };
+		4D775B9D207EFA1A0097CDD9 /* MCPrivacyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D775B9B207EFA1A0097CDD9 /* MCPrivacyViewController.xib */; };
 		4DAB14AE2079F391007CBD54 /* MCSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB14AD2079F391007CBD54 /* MCSettingsViewController.swift */; };
 		4DAB14B1207A082D007CBD54 /* MCCategoryManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB14AF207A082D007CBD54 /* MCCategoryManageViewController.swift */; };
 		4DAB14B2207A082D007CBD54 /* MCCategoryManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DAB14B0207A082D007CBD54 /* MCCategoryManageViewController.xib */; };
@@ -90,6 +92,8 @@
 		4D52FF4D2063D40900ABB17A /* SwiftHEXColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftHEXColors.swift; sourceTree = "<group>"; };
 		4D775B96207EF2900097CDD9 /* MCAboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCAboutMeViewController.swift; sourceTree = "<group>"; };
 		4D775B97207EF2900097CDD9 /* MCAboutMeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCAboutMeViewController.xib; sourceTree = "<group>"; };
+		4D775B9A207EFA1A0097CDD9 /* MCPrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCPrivacyViewController.swift; sourceTree = "<group>"; };
+		4D775B9B207EFA1A0097CDD9 /* MCPrivacyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCPrivacyViewController.xib; sourceTree = "<group>"; };
 		4DAB14AD2079F391007CBD54 /* MCSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCSettingsViewController.swift; sourceTree = "<group>"; };
 		4DAB14AF207A082D007CBD54 /* MCCategoryManageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCCategoryManageViewController.swift; sourceTree = "<group>"; };
 		4DAB14B0207A082D007CBD54 /* MCCategoryManageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCCategoryManageViewController.xib; sourceTree = "<group>"; };
@@ -191,6 +195,8 @@
 				4DC2826A207B069100462A2D /* MCChannelManagementViewController.xib */,
 				4D775B96207EF2900097CDD9 /* MCAboutMeViewController.swift */,
 				4D775B97207EF2900097CDD9 /* MCAboutMeViewController.xib */,
+				4D775B9A207EFA1A0097CDD9 /* MCPrivacyViewController.swift */,
+				4D775B9B207EFA1A0097CDD9 /* MCPrivacyViewController.xib */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -326,6 +332,7 @@
 				4D1C3A5A205223470014DDE9 /* Assets.xcassets in Resources */,
 				4D2A45EC206001D600A2BE99 /* MCAddStorageViewController.xib in Resources */,
 				4D2A45D4205A68D700A2BE99 /* StorageRecordTableViewCell.xib in Resources */,
+				4D775B9D207EFA1A0097CDD9 /* MCPrivacyViewController.xib in Resources */,
 				4DAB14B2207A082D007CBD54 /* MCCategoryManageViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,6 +371,7 @@
 				4D1C3A51205223470014DDE9 /* AppDelegate.swift in Sources */,
 				4DAB14AE2079F391007CBD54 /* MCSettingsViewController.swift in Sources */,
 				4D2A45EF2060036F00A2BE99 /* MCStorageRecordDetailViewController.swift in Sources */,
+				4D775B9C207EFA1A0097CDD9 /* MCPrivacyViewController.swift in Sources */,
 				4DAB14B1207A082D007CBD54 /* MCCategoryManageViewController.swift in Sources */,
 				4D52FF3A206208A200ABB17A /* MCDatabaseHelper.swift in Sources */,
 				4D2A45C420596E3500A2BE99 /* MCStorageRecordListViewController.swift in Sources */,

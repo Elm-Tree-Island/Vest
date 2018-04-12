@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MCPrivacyViewController" customModule="VEST" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uKw-Y6-rgi">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <mutableString key="text">欢迎了解 Google 隐私权政策
+
+当您使用 Google 服务，即表示您信赖我们对您的信息的处理方式。此隐私权政策旨在帮助您了解我们会收集哪些数据、为什么收集这些数据以及会利用这些数据做些什么。了解这些内容至关重要，因此我们希望您能抽出时间仔细阅读此政策。请注意，您可以在我的帐户中找到一些控制项，通过这些控制项，您可以管理自己的信息并保护自己的隐私和安全。
+
+隐私权政策
+
+隐藏举例
+最后修改日期： 2017年12月18日 （查看存档版本）
+下载 PDF 版本
+您可以通过多种不同的方式来使用我们的服务，例如搜索和分享信息、与他人通信或者创建新内容等。如果您通过某种方式（例如创建Google帐户）与我们分享信息，我们就能为您提供更好的服务，例如为您显示相关程度更高的搜索结果和广告、帮助您与他人联系或者帮助您更轻松快捷地与他人分享内容。既然您选择使用我们的服务，希望您能清楚地了解我们对信息的使用方式以及您对自己隐私权的保护措施。
+
+我们的隐私权政策解释了以下几个方面的问题：
+
+我们收集哪些信息，以及收集这些信息的原因。
+我们对这些信息的使用方式。
+我们为您提供的选择，包括如何访问和更新信息。
+我们一直力求为用户化繁为简，但是如果您不熟悉 Cookie、IP 地址、像素标签和浏览器等术语，请先了解有关这些关键术语的信息。Google 非常重视所有新老用户的隐私权问题，因此请您花些时间了解一下我们的惯例。如果您有任何问题，请与我们联系。
+
+
+我们收集的信息
+
+我们收集信息是为了向所有用户提供更好的服务，其中既包括一些推断出来的基本信息（例如您使用的语言），也包括一些较为复杂的信息（例如您觉得哪些广告最有用、网上的哪些人对您最重要，或您可能喜欢哪些 YouTube 视频）。
+
+我们收集信息的方式如下：
+
+您向我们提供的信息。例如，我们的很多服务都要求您注册 Google 帐户，而当您注册 Google 帐户时，我们会要求您提供个人信息，例如您的姓名、电子邮件地址、电话号码或信用卡号，这些信息会存储在您的帐户名下。如果您想充分利用我们提供的各种分享功能，可能还需要创建公开显示的 Google 个人资料，而个人资料中可能会包含您的姓名和照片。
+
+我们在您使用服务的过程中获取的信息。我们会收集关于您使用的服务以及使用方式的信息，例如您何时在 YouTube 上观看了视频、何时访问了使用我们的广告服务的网站，或者何时查看了我们的广告和内容并与之互动。此类信息包括：
+
+设备信息
+
+我们会收集设备专用的信息（例如您的硬件型号、操作系统版本、唯一设备标识符以及包括电话号码在内的移动网络信息）。Google 可能会将您的设备标识符或电话号码与您的 Google 帐户相关联。
+
+日志信息
+
+当您使用我们的服务或查看由 Google 提供的内容时，我们会自动收集某些信息并存储到服务器日志中。此类信息包括：
+
+您对我们服务的详细使用情况，例如您的搜索查询内容。
+电话日志信息，例如您的电话号码、主叫方号码、呼叫转移号码、通话时间和日期、通话时长、短信路由信息以及通话类型。
+IP 地址
+设备事件信息，例如崩溃、系统活动、硬件设置、浏览器类型、浏览器语言、您提出请求的日期和时间以及引荐网址。
+可唯一标识您的浏览器或 Google 帐户的 Cookie。
+位置信息
+
+当您使用 Google 服务时，我们可能会收集和处理有关您实际所在位置的信息。我们会使用各种技术进行定位，这些技术包括 IP 地址、GPS 以及能够提供相关信息的其他传感器（比如说可能会为 Google 提供附近设备、Wi-Fi 接入点和基站的信息）。
+
+唯一应用程序编号
+
+某些服务包含唯一应用程序编号。当您安装或卸载相关服务或当这些服务定期与我们的服务器通信（例如对软件进行自动更新）时，系统会将此编号以及与安装相关的信息（例如操作系统类型和应用程序版本号）发送给 Google。
+
+本地存储
+
+我们可能会使用浏览器网络存储等机制（包括HTML5）和应用数据缓存，收集您设备上的信息（包括个人信息）并进行本地存储。
+
+Cookie 和类似技术
+
+当您访问 Google 服务时，我们与合作伙伴会采用各种技术收集和存储相关信息，这可能包括使用 Cookie 或类似技术来识别您的浏览器或设备。当您与我们提供给合作伙伴的服务（例如广告服务或可能显示在其他网站上的 Google 功能）进行互动时，我们也会使用这类技术收集和存储信息。我们的 Google Analytics（分析）产品可帮助商家和网站所有者分析其网站和应用获得的流量。与我们的广告服务（例如使用 DoubleClick Cookie 的服务）结合使用时，Google Analytics（分析）提供的信息会被 Google Analytics（分析）客户或 Google t运用 Google 技术与多个网站的访问信息相关联。
+
+我们从合作伙伴处获得的与您相关的信息，以及我们在您登录到 Google时收集的信息，可能都与您的 Google 帐户相关联。凡是与您的 Google 帐户相关联的信息，我们一律会视为个人信息。如需详细了解如何访问、管理或删除与您的 Google 帐户相关联的信息，请查阅本政策的透明度和选择部分。
+
+
+我们如何使用收集到的信息
+
+我们会利用从所有服务中收集到的信息来提供、维护、保护和完善这些服务，同时开发新的服务并保护 Google 和 Google 用户。我们还会使用此类信息为您提供定制内容，例如相关程度更高的搜索结果和广告。
+
+对于我们提供的所有需要 Google 帐户的服务，我们都可能会使用您在 Google 个人资料中提供的姓名。此外，我们还会替换掉之前与您的 Google 帐户相关联的姓名，以确保您在我们的所有服务中采用同一个身份。如果其他用户知道您的电子邮件地址或其他能够识别您身份的信息，我们就会向他们显示您的 Google 个人资料公开信息，例如您的姓名和照片。
+
+如果您已拥有 Google 帐户，我们可能会在 Google 服务（包括广告及其他商业环境）中显示您的个人资料名称、个人资料照片以及您在 Google 上或与 Google 帐户相关联的第三方应用上执行的操作（例如，+1 以及您发表的评价和评论）。我们会尊重您在 Google 帐户中针对限制分享或公开范围设置所做的选择。
+
+当您与 Google 联系时，我们会保存您的通信记录，这有助于解决您可能遇到的问题。我们会向您的电子邮件地址发送有关 Google 服务的邮件，例如告知您即将进行的变更或改进。
+
+我们会使用通过 Cookie 和其他技术（例如像素代码）收集到的信息来提升您的用户体验，并提高我们的整体服务质量。Google Analytics（分析）就是其中一个用来改善 Google 其他服务的产品。例如，通过保存语言偏好设置，我们可以使用您的首选语言来显示 Google 服务。此外，向您显示定制广告时，我们不会将来自 Cookie 或类似技术的标识符与敏感类别（例如基于种族、宗教、性取向或健康状况而划分的类别）相关联。
+
+我们的自动化系统会对您的内容（包括电子邮件）进行分析，以便为您提供更符合个人需求的产品功能，例如自定义搜索结果、量身定制的广告，以及垃圾邮件和恶意软件检测。
+
+我们可能会将您在某项服务中的个人信息与在其他 Google 服务中的信息（包括个人信息）结合起来，以便更好地满足您的需求（例如使您能够更轻松地与相识的人分享信息）。我们也可能会根据您的帐户设置将您在其他网站和应用上的活动与您的个人信息相关联，以便改善 Google 的服务和 Google 投放的广告。
+
+当我们要将信息用于本隐私权政策未载明的其它用途时，则会事先征求您的同意。
+
+用于处理个人信息的 Google 服务器遍布在全世界的许多国家/地区。因此，我们处理您的个人信息时所用的服务器可能并不位于您所在的国家/地区。
+
+
+透明度和选择
+
+每个人对于隐私权的关注点各有不同，而我们的目标就是明确指出我们都收集哪些信息，以便您明智地选择其使用方式。例如，您可以：
+
+查看和更新 Google 活动控件，以决定在您使用 Google 服务时要将哪些类型的数据（例如，您的 YouTube 视频观看记录或搜索记录）保存到您帐户名下。您也可以访问这些控制项，以指定当您在退出帐户的情况下使用我们的服务时，要在您设备上使用 Cookie 还是类似技术来存储特定的活动。
+使用 Google 信息中心查看并控制与您的 Google 帐户关联的某些类型的信息。
+通过“广告设置”查看和修改您希望 Google 和其他网站向您展示哪些 Google 广告（例如，您可能感兴趣的类别）。您还可以通过该页面停用某些 Google 广告服务。
+调整与 Google 帐户关联的“个人资料”显示给其他人的内容。
+控制通过 Google 帐户分享信息的对象。
+从我们的众多服务中提取与您的Google 帐户关联的信息。
+选择您的个人资料名称和个人资料照片是否出现在广告中显示的分享认可中。
+您还可以对自己的浏览器进行设置，以阻止所有Cookie（包括与我们的服务相关联的Cookie）或者在我们设置Cookie时予以提示。但请务必注意，停用Cookie可能会造成我们的许多服务无法正常使用。例如，我们可能无法保存您的语言偏好设置。
+
+
+您分享的信息
+
+我们的很多服务都可以让您与他人分享信息。请注意，当您公开分享信息时，包括Google在内的各种搜索引擎都可能会将这些信息收录到索引中。我们的服务向您提供了有关分享和删除内容的多种选项。
+
+
+访问和更新您的个人信息
+
+无论您何时使用我们的服务，我们都会力求让您顺利访问自己的个人信息。如果这些信息有误，我们会努力提供各种方式来让您快速更新信息或删除信息（除非我们出于合法业务或法律方面的原因而必须保留这些信息）。
+
+我们力求对服务进行完善的维护，以保护信息免遭意外或恶意的破坏。因此，当您从我们的服务中删除信息后，我们可能不会立即从在用的服务器中删除这些信息的残留副本，也可能不会从备份系统中删除相应的信息。
+
+
+我们分享的信息
+
+我们不会与Google以外的任何公司、组织和个人分享用户的个人信息，但以下情况除外：
+
+征得您的同意
+
+在征得您的同意后，我们会与 Google 以外的公司、组织和个人分享您的个人信息。我们必须您选择同意才会共享任何敏感的个人信息。
+
+与域管理员分享
+
+如果您的 Google 帐户是由域管理员替您管理的（例如 G Suite 的用户就属于这种情况），那么您的域管理员以及为您的组织提供用户支持的经销商就有权访问您的 Google 帐户信息（包括您的电子邮件和其他数据）。您的域管理员还可以进行以下操作：
+
+查看关于您帐户的统计信息，例如有关您安装的应用程序的统计信息。
+更改您的帐户密码。
+暂停或终止您的帐户访问权限。
+访问或保留您帐户中存储的信息。
+为了满足适用法律、法规、法律程序的请求或强制性的政府请求而接收您的帐户信息。
+限制您删除或修改信息或隐私权设置。
+有关详情，请参阅您的域管理员的隐私权政策。
+
+用于外部处理
+
+我们会向Google的关联机构或其他受信任的商家或个人提供用户个人信息，让他们按照我们的说明、隐私权政策以及其他任何相关的保密和安全措施来为我们处理上述信息。
+
+出于法律原因
+
+如果我们确信：，为了实现以下目的而有必要访问、使用、保留或披露相关信息，我们就会与 Google 以外的公司、组织和个人分享用户个人信息：
+
+遵循任何适用法律、法规、法律程序的要求或强制性的政府要求。
+执行适用的服务条款（包括调查可能存在的违规情况）。
+查找、预防或处理欺诈、安全或技术方面的问题。
+在法律要求或允许的范围内，保护 Google、Google 用户或公众的权利、财产或安全免遭损害。
+我们可能会对外公开并与合作伙伴（例如发布商、广告客户或关联的网站）分享不含身份识别内容的信息。例如，我们可能会对外公开信息，以便让公众了解 Google 服务的总体使用趋势。
+
+如果 Google 涉及合并、收购或资产出售等交易，我们会在任何个人信息进行转让或受其他隐私权政策约束之前，继续确保其机密性并通知受到影响的用户。
+
+
+信息安全
+
+我们努力为 Google 和我们的用户提供保护，以免我们保存的信息在未经授权的情况下被访问、篡改、披露或破坏。为此，我们特别采取了以下措施：
+
+我们使用 SSL 对许多服务进行加密。
+我们提供了两步验证供您在访问 Google 帐户时使用，并在 Google Chrome 浏览器中提供了安全浏览功能。
+我们会审查信息收集、存储和处理方面的做法（包括物理性安全措施），以避免各系统遭到未经授权的访问。
+我们只允许那些为了帮我们处理个人信息而需要知晓这些信息的 Google 员工、承包商和代理商访问个人信息，而且他们需要履行严格的合同保密义务，如果其未能履行这些义务，就可能会被追究法律责任或被终止其与 Google 的关系。
+
+隐私权政策适用范围
+
+我们的隐私权政策适用于由 Google LLC 及其关联公司提供的所有服务（包括 YouTube，Google 在 Android 设备上提供的服务，以及在其他网站上提供的服务，例如我们的广告服务），但另外设定隐私权政策且未纳入本隐私权政策的服务不在此列。
+
+我们的隐私权政策不适用于由其他公司或个人提供的服务，例如在搜索结果中向您显示的产品或网站、可能包含 Google 服务的网站或者在我们的服务中链接到的其他网站。对于为我们的服务进行广告宣传，以及可能使用 Cookie、像素标签和其他技术来投放和提供相关广告的其他公司和组织，我们的隐私权政策并未涵盖其信息处理惯例。
+
+
+政策的遵守以及与监管机构的配合
+
+我们会定期检查我们遵守隐私权政策的情况。此外，我们还遵循一些自我监管框架，包括“EU-US Privacy Shield Frameworks”和“Swiss-US Privacy Shield Frameworks”。收到正式的书面投诉后，我们会与投诉方联系，以便跟进处理。我们会与相应的监管机构（包括当地的数据保护机构）合作，以解决 Google 与用户之间无法直接解决的有关个人数据传输的投诉问题。   https://policies.google.com/privacy?hl=zh-CN</mutableString>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uKw-Y6-rgi" secondAttribute="trailing" id="fiS-oV-tkr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="uKw-Y6-rgi" secondAttribute="bottom" id="gLC-Zd-y10"/>
+                <constraint firstItem="uKw-Y6-rgi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="lMi-JX-6kl"/>
+                <constraint firstItem="uKw-Y6-rgi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="xmI-Ud-fXT"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

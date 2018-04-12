@@ -61,7 +61,7 @@ class MCSettingsViewController: MCBaseViewController, UITableViewDataSource, UIT
         case 1:         // 隐私声明、关于
             switch indexPath.row {
             case 0:         // 隐私声明
-                //                self.navigationController?.pushViewController(MCAboutMeViewController(), animated: true)
+                self.navigationController?.pushViewController(MCPrivacyViewController(), animated: true)
                 break
             case 1:         // 关于
                 self.navigationController?.pushViewController(MCAboutMeViewController(), animated: true)
