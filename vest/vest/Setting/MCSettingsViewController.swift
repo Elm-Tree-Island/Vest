@@ -44,6 +44,14 @@ class MCSettingsViewController: MCBaseViewController, UITableViewDataSource, UIT
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 0 {
+            return 12
+        } else {
+            return 18
+        }
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.section {
         case 0:         // 管理类
