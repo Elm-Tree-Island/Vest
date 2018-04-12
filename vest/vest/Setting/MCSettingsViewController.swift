@@ -19,18 +19,11 @@ class MCSettingsViewController: MCBaseViewController, UITableViewDataSource, UIT
 
         self.tableviewDatasource = [["类别管理", "渠道管理"],
                                     ["隐私声明", "关于"]];
-        // Setup UI
-        self.setupTableview()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    // MARK: - UI setup
-    func setupTableview() {
-        self.tableview .register(UITableViewCell.self, forCellReuseIdentifier: "mc_setting_tableview_cell")
     }
     
     // MARK: - UITableViewDataSource
@@ -47,9 +40,6 @@ class MCSettingsViewController: MCBaseViewController, UITableViewDataSource, UIT
         let cell = tableview.dequeueReusableCell(withIdentifier: "mc_setting_tableview_cell", for: indexPath)
         let arrRows = self.tableviewDatasource?[indexPath.section] as! NSArray
         cell.textLabel?.text = arrRows[indexPath.row] as? String
-        
-        cell.selectionStyle = .none
-        cell.accessoryType = .disclosureIndicator
         
         return cell
     }
