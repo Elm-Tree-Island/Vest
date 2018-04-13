@@ -26,6 +26,7 @@ class MCDatabaseHelper: NSObject {
         
         // Create Table
         self.createTableStorage()
+        self.createTableCategory()
     }
     
     private func connectDatabase(filePath: String) -> Void {
@@ -132,5 +133,21 @@ class MCDatabaseHelper: NSObject {
     // END ===================== Storage Table =========================
     
     
+    // ===================== Category Table =========================
+    let TABLE_CATEGORY = Table("Category")
+    let TABLE_CATEGORY_ID = Expression<Int64>("id")
+    let TABLE_CATEGORY_NAME = Expression<String>("name")
+
+    /// Create table 'Storage'
+    func createTableCategory() -> Void {
+        do {
+            try dbConnection.run(TABLE_CATEGORY.create(ifNotExists: true) { t in
+                t.column(TABLE_CATEGORY_ID, primaryKey: .autoincrement)
+                t.column(TABLE_CATEGORY_NAME)
+            })
+        } catch {
+            Log.error?.message("Create table category FAILED")
+        }
+    }
     
 }
