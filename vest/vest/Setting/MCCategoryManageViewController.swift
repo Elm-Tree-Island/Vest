@@ -8,6 +8,8 @@
 
 import UIKit
 
+let TABLEVIEW_CELL_IDENTIFIER = "mc_setting_category_tableview_cell"
+
 class MCCategoryManageViewController: MCBaseViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableview: UITableView!
     
@@ -26,7 +28,7 @@ class MCCategoryManageViewController: MCBaseViewController, UITableViewDelegate,
     
     // MARK: - UI setup
     func setupTableview() {
-        self.tableview.register(UITableViewCell.self, forCellReuseIdentifier: "mc_setting_tableview_cell")
+        self.tableview.register(UITableViewCell.self, forCellReuseIdentifier: TABLEVIEW_CELL_IDENTIFIER)
         self.tableview.delegate = self
         self.tableview.dataSource = self
         self.tableview.tableFooterView = UIView()
@@ -43,7 +45,7 @@ class MCCategoryManageViewController: MCBaseViewController, UITableViewDelegate,
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableview.dequeueReusableCell(withIdentifier: "mc_setting_tableview_cell", for: indexPath)
+        let cell = tableview.dequeueReusableCell(withIdentifier: TABLEVIEW_CELL_IDENTIFIER, for: indexPath)
         cell.textLabel?.text = "arrRows[indexPath.row] as? String"
         
         cell.selectionStyle = .none
