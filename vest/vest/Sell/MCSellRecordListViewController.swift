@@ -12,11 +12,7 @@ class MCSellRecordListViewController: MCBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.tabBarController?.navigationItem.title = "Sell Record"
+        self.title = "Sell Record"
     }
     
     override func didReceiveMemoryWarning() {

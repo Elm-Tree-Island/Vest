@@ -17,7 +17,8 @@ class MCStorageRecordListViewController: MCBaseViewController, UITableViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tabBarController?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped(_:)))
+        self.title = "Storage"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped(_:)))
         
         // Setup UI
         self.setupTableview()
@@ -25,7 +26,6 @@ class MCStorageRecordListViewController: MCBaseViewController, UITableViewDataSo
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.tabBarController?.navigationItem.title = "Storage"
         
         self.arrDatasource = MCDatabaseHelper.sharedInstance.getAllStorageRecord()
         self.tableViewStorageRecords.reloadData()

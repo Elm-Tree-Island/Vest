@@ -15,7 +15,7 @@ class MCSettingsViewController: MCBaseViewController, UITableViewDataSource, UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBarController?.navigationItem.title = "更多"
+        self.navigationItem.title = "更多"
 
         self.tableviewDatasource = [["类别管理", "渠道管理"],
                                     ["隐私声明", "关于"]];
