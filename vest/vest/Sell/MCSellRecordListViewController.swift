@@ -12,7 +12,7 @@ class MCSellRecordListViewController: MCBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Sell Record"
+        self.title = "出货"
     }
     
     override func didReceiveMemoryWarning() {
