@@ -8,6 +8,17 @@
 
 import UIKit
 import CleanroomLogger
+import AVFoundation
+
+struct Platform {
+    static let isSimulator: Bool = {
+        var isSim = false
+        #if arch(i386) || arch(x86_64)
+            isSim = true
+        #endif
+        return isSim
+    }()
+}
 
 class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -27,14 +38,19 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .done, target: self, action: #selector(onSaveStorage))
         
         self.setupTableview()
-        self.setupImagePickerCtrler()
+        
+        // Elsewhere...
+        
+        if Platform.isSimulator {
+            // Do nothing
+        } else {
+            self.setupImagePickerCtrler()
+        }
         
         // Add gesture recognizer
         self.ivProductPic.layer.shadowColor = UIColor(hexString: "#9B9B9B")?.cgColor
         let tapGR = UITapGestureRecognizer(target: self, action: #selector(onTapImageView))
         self.ivProductPic.addGestureRecognizer(tapGR)
-        
-        self.setupImagePickerCtrler()
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,6 +66,15 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
     }
     
     func setupImagePickerCtrler() {
+        //    iOS 判断应用是否有使用相机的权限
+        let mediaType = AVMediaType.video           //读取媒体类型
+        let authStatus = AVCaptureDevice.authorizationStatus(for: mediaType)
+        if(authStatus == .restricted || authStatus == .denied){
+            let errorStr = "应用相机权限受限,请在设置中启用"
+            Log.error?.message(errorStr)
+            return;
+        }
+        
         if self.imagePickerController == nil {
             self.imagePickerController = UIImagePickerController()
             self.imagePickerController.delegate = self
