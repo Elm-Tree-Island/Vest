@@ -57,10 +57,14 @@ class MCSettingsViewController: MCBaseViewController, UITableViewDataSource, UIT
         case 0:         // 管理类
             switch indexPath.row {
             case 0:         // 类别管理
-                self.navigationController?.pushViewController(MCCategoryManageViewController(), animated: true)
+                let controller = MCCategoryManageViewController()
+                controller.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(controller, animated: true)
                 
             case 1:         // 渠道管理
-                self.navigationController?.pushViewController(MCChannelManagementViewController(), animated: true)
+                let controller = MCChannelManagementViewController()
+                controller.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(controller, animated: true)
                 
             default:
                 break
@@ -69,10 +73,14 @@ class MCSettingsViewController: MCBaseViewController, UITableViewDataSource, UIT
         case 1:         // 隐私声明、关于
             switch indexPath.row {
             case 0:         // 隐私声明
-                self.navigationController?.pushViewController(MCPrivacyViewController(), animated: true)
+                let controller = MCPrivacyViewController()
+                controller.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(controller, animated: true)
                 break
             case 1:         // 关于
-                self.navigationController?.pushViewController(MCAboutMeViewController(), animated: true)
+                let controller = MCAboutMeViewController()
+                controller.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(controller, animated: true)
                 
             default:
                 break

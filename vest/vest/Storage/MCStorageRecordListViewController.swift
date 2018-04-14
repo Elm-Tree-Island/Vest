@@ -50,6 +50,7 @@ class MCStorageRecordListViewController: MCBaseViewController, UITableViewDataSo
     
     @objc func addTapped(_ sender: UIBarButtonItem) {
         let addNewVC = MCAddStorageViewController()
+        addNewVC.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(addNewVC, animated: true)
     }
     
@@ -74,6 +75,7 @@ class MCStorageRecordListViewController: MCBaseViewController, UITableViewDataSo
     // MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailVC = MCStorageRecordDetailViewController()
+        detailVC.hidesBottomBarWhenPushed = true
         detailVC.productModel = self.arrDatasource?.object(at: indexPath.row) as? MCStorageRecordModel
         self.navigationController?.pushViewController(detailVC, animated: true)
     }

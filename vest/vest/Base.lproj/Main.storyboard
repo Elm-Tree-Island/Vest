@@ -180,7 +180,7 @@
         <!--进货-->
         <scene sceneID="znZ-u2-vVh">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1a0-WV-mlL" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="1a0-WV-mlL" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="进货" image="first" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cAv-q1-Em6">
