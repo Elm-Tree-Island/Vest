@@ -13,6 +13,8 @@ let TABLEVIEW_CELL_IDENTIFIER = "mc_setting_category_tableview_cell"
 class MCCategoryManageViewController: MCBaseViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableview: UITableView!
     
+    var arrAllCategoryDataSource:NSArray!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "类别管理"
@@ -20,8 +22,10 @@ class MCCategoryManageViewController: MCBaseViewController, UITableViewDelegate,
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped(_:)))
         
         self.setupTableview()
+        
+        self.arrAllCategoryDataSource = MCDatabaseHelper.sharedInstance.getAllCategorys()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -33,15 +37,19 @@ class MCCategoryManageViewController: MCBaseViewController, UITableViewDelegate,
         self.tableview.dataSource = self
         self.tableview.tableFooterView = UIView()
     }
-
+    
     // MARK: - Event Handler
     @objc func addTapped(_ sender: UIBarButtonItem) {
         
     }
-
+    
     // MARK: - Tableview delegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        if self.arrAllCategoryDataSource == nil {
+            return 0
+        } else {
+            return self.arrAllCategoryDataSource.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

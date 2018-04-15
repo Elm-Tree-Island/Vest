@@ -150,4 +150,19 @@ class MCDatabaseHelper: NSObject {
         }
     }
     
+    func getAllCategorys() -> NSArray {
+        let query = TABLE_CATEGORY.order(TABLE_CATEGORY_NAME.desc)
+        let arrResult = NSMutableArray()
+        
+        for item in (try! dbConnection.prepare(query)) {
+            let model = MCCategoryModel()
+            model.categoryId = item[TABLE_CATEGORY_ID]
+            model.name = item[TABLE_CATEGORY_NAME]
+
+            arrResult.add(model)
+        }
+        
+        return arrResult
+    }
+    
 }

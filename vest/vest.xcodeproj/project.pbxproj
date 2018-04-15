@@ -42,6 +42,7 @@
 		4D775B9C207EFA1A0097CDD9 /* MCPrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D775B9A207EFA1A0097CDD9 /* MCPrivacyViewController.swift */; };
 		4D775B9D207EFA1A0097CDD9 /* MCPrivacyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D775B9B207EFA1A0097CDD9 /* MCPrivacyViewController.xib */; };
 		4D775BC52082506D0097CDD9 /* MCSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D775BC42082506D0097CDD9 /* MCSummaryViewController.swift */; };
+		4D775BC82083962E0097CDD9 /* MCCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D775BC72083962E0097CDD9 /* MCCategoryModel.swift */; };
 		4DAB14AE2079F391007CBD54 /* MCSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB14AD2079F391007CBD54 /* MCSettingsViewController.swift */; };
 		4DAB14B1207A082D007CBD54 /* MCCategoryManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB14AF207A082D007CBD54 /* MCCategoryManageViewController.swift */; };
 		4DAB14B2207A082D007CBD54 /* MCCategoryManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DAB14B0207A082D007CBD54 /* MCCategoryManageViewController.xib */; };
@@ -96,6 +97,7 @@
 		4D775B9A207EFA1A0097CDD9 /* MCPrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCPrivacyViewController.swift; sourceTree = "<group>"; };
 		4D775B9B207EFA1A0097CDD9 /* MCPrivacyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCPrivacyViewController.xib; sourceTree = "<group>"; };
 		4D775BC42082506D0097CDD9 /* MCSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCSummaryViewController.swift; sourceTree = "<group>"; };
+		4D775BC72083962E0097CDD9 /* MCCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCCategoryModel.swift; sourceTree = "<group>"; };
 		4DAB14AD2079F391007CBD54 /* MCSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCSettingsViewController.swift; sourceTree = "<group>"; };
 		4DAB14AF207A082D007CBD54 /* MCCategoryManageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCCategoryManageViewController.swift; sourceTree = "<group>"; };
 		4DAB14B0207A082D007CBD54 /* MCCategoryManageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCCategoryManageViewController.xib; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 		4D2A45C120596D8600A2BE99 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				4D775BC6208395FD0097CDD9 /* Model */,
 				4DAB14AD2079F391007CBD54 /* MCSettingsViewController.swift */,
 				4DAB14AF207A082D007CBD54 /* MCCategoryManageViewController.swift */,
 				4DAB14B0207A082D007CBD54 /* MCCategoryManageViewController.xib */,
@@ -265,6 +268,14 @@
 				4D52FF4D2063D40900ABB17A /* SwiftHEXColors.swift */,
 			);
 			path = Color;
+			sourceTree = "<group>";
+		};
+		4D775BC6208395FD0097CDD9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4D775BC72083962E0097CDD9 /* MCCategoryModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D775BC82083962E0097CDD9 /* MCCategoryModel.swift in Sources */,
 				4D2A45D8205BB7DD00A2BE99 /* MCStorageRecordModel.swift in Sources */,
 				4D52FF4F2063D40A00ABB17A /* SwiftHEXColors.swift in Sources */,
 				4D2A45D3205A68D700A2BE99 /* StorageRecordTableViewCell.swift in Sources */,
