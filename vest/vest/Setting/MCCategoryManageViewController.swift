@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CleanroomLogger
 
 let TABLEVIEW_CELL_IDENTIFIER = "mc_setting_category_tableview_cell"
 
@@ -40,7 +41,36 @@ class MCCategoryManageViewController: MCBaseViewController, UITableViewDelegate,
     
     // MARK: - Event Handler
     @objc func addTapped(_ sender: UIBarButtonItem) {
+        let alertController = UIAlertController(title: "", message: "", preferredStyle: .alert)
+        alertController.addTextField(configurationHandler: { (textField) in
+            textField.placeholder = "请输入类别名称"
+            
+        })
         
+        let btnCancel = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+        let btnOK = UIAlertAction(title: "确定", style: .default, handler: { (action) in
+            let strInput = alertController.textFields?.first?.text
+            let model = MCCategoryModel()
+            if strInput?.isEmpty == false {
+                model.name = strInput
+                
+                let result = MCDatabaseHelper.sharedInstance.insertCategory(model:model)
+                if (result) {
+                    // 插入成功， 异步更新UI
+                    self.arrAllCategoryDataSource = MCDatabaseHelper.sharedInstance.getAllCategorys()
+                    DispatchQueue.main.async {
+                        self.tableview.reloadData()
+                    }
+                }
+                
+            } else {
+                Log.debug?.message("名称不能为空")
+            }
+        })
+        
+        alertController.addAction(btnCancel)
+        alertController.addAction(btnOK)
+        self.present(alertController, animated: true, completion: nil)
     }
     
     // MARK: - Tableview delegate
@@ -54,7 +84,10 @@ class MCCategoryManageViewController: MCBaseViewController, UITableViewDelegate,
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableview.dequeueReusableCell(withIdentifier: TABLEVIEW_CELL_IDENTIFIER, for: indexPath)
-        cell.textLabel?.text = "arrRows[indexPath.row] as? String"
+        let category:MCCategoryModel = self.arrAllCategoryDataSource![indexPath.row] as! MCCategoryModel
+        
+        cell.textLabel?.text = category.name
+        cell.detailTextLabel?.text = "\(category.categoryId)"
         
         cell.selectionStyle = .none
         cell.accessoryType = .disclosureIndicator

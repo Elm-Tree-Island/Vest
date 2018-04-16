@@ -151,7 +151,7 @@ class MCDatabaseHelper: NSObject {
     }
     
     func getAllCategorys() -> NSArray {
-        let query = TABLE_CATEGORY.order(TABLE_CATEGORY_NAME.desc)
+        let query = TABLE_CATEGORY.order(TABLE_CATEGORY_NAME.asc)
         let arrResult = NSMutableArray()
         
         for item in (try! dbConnection.prepare(query)) {
@@ -165,4 +165,14 @@ class MCDatabaseHelper: NSObject {
         return arrResult
     }
     
+    func insertCategory(model:MCCategoryModel) -> Bool {
+        do {
+            let rowID = try dbConnection.run(TABLE_CATEGORY.insert(TABLE_CATEGORY_NAME <- model.name))
+            Log.debug?.message("Insert category successfully, new RowId = \(rowID)")
+        } catch {
+            Log.error?.message("Insert category Failed, category name\(model.name)")
+            return false
+        }
+        return true
+    }
 }
