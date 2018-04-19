@@ -175,4 +175,17 @@ class MCDatabaseHelper: NSObject {
         }
         return true
     }
+    
+    func deleteCategory(categoryId:Int64) -> Bool {
+        // TODO: 实现
+        let recordToDelete = TABLE_CATEGORY.filter(TABLE_CATEGORY_ID == categoryId)
+        do {
+            try dbConnection.run(recordToDelete.delete())
+            Log.debug?.message("Delete category record SUCCESSED, ID = \(categoryId)")
+        } catch {
+            Log.error?.message("Delete category record FAILED, ID = \(categoryId)")
+        }
+        
+        return true;
+    }
 }

@@ -94,4 +94,23 @@ class MCCategoryManageViewController: MCBaseViewController, UITableViewDelegate,
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // 删除该Cell
+            let category = self.arrAllCategoryDataSource![indexPath.row] as! MCCategoryModel
+            if category.categoryId > 0 {
+                let result = MCDatabaseHelper.sharedInstance.deleteCategory(categoryId: category.categoryId)
+                if result {     // 删除成功
+                    self.arrAllCategoryDataSource = MCDatabaseHelper.sharedInstance.getAllCategorys()
+                    DispatchQueue.main.async {
+                        self.tableview.deleteRows(at: [indexPath], with: .automatic)
+                    }
+                } else {    // 删除失败
+                    
+                }
+            }
+            
+        }
+    }
 }
