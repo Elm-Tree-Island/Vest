@@ -10,3 +10,5 @@ github "stephencelis/SQLite.swift" ~> 0.11.4
 # Log system
 github "emaloney/CleanroomLogger" ~> 6.0.0
 
+# ActionSheetPicker
+github "skywinder/ActionSheetPicker-3.0"
