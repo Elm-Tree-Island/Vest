@@ -17,7 +17,7 @@ class MCStorageRecordDetailViewController: MCBaseViewController, UITableViewDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = NSLocalizedString("Detail", comment: "")
+        self.title = NSLocalizedString("详情", comment: "")
     
         self.tableView.tableFooterView = UIView(frame: CGRect.zero)
     }
