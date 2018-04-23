@@ -48,6 +48,7 @@
 		4DAB14B2207A082D007CBD54 /* MCCategoryManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DAB14B0207A082D007CBD54 /* MCCategoryManageViewController.xib */; };
 		4DC2826B207B069100462A2D /* MCChannelManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC28269207B069100462A2D /* MCChannelManagementViewController.swift */; };
 		4DC2826C207B069100462A2D /* MCChannelManagementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DC2826A207B069100462A2D /* MCChannelManagementViewController.xib */; };
+		7FD936AD208E2348001ABC22 /* MCChannelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD936AC208E2348001ABC22 /* MCChannelModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -103,6 +104,7 @@
 		4DAB14B0207A082D007CBD54 /* MCCategoryManageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCCategoryManageViewController.xib; sourceTree = "<group>"; };
 		4DC28269207B069100462A2D /* MCChannelManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCChannelManagementViewController.swift; sourceTree = "<group>"; };
 		4DC2826A207B069100462A2D /* MCChannelManagementViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCChannelManagementViewController.xib; sourceTree = "<group>"; };
+		7FD936AC208E2348001ABC22 /* MCChannelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCChannelModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				4D775BC72083962E0097CDD9 /* MCCategoryModel.swift */,
+				7FD936AC208E2348001ABC22 /* MCChannelModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				4D52FF4F2063D40A00ABB17A /* SwiftHEXColors.swift in Sources */,
 				4D2A45D3205A68D700A2BE99 /* StorageRecordTableViewCell.swift in Sources */,
 				4D2A45EB206001D600A2BE99 /* MCAddStorageViewController.swift in Sources */,
+				7FD936AD208E2348001ABC22 /* MCChannelModel.swift in Sources */,
 				4D775B98207EF2900097CDD9 /* MCAboutMeViewController.swift in Sources */,
 				4D775BC52082506D0097CDD9 /* MCSummaryViewController.swift in Sources */,
 				4D52FF4B20639D0E00ABB17A /* MCBaseViewController.swift in Sources */,
