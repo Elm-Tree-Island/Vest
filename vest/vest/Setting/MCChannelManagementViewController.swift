@@ -25,7 +25,7 @@ class MCChannelManagementViewController: MCBaseViewController, UITableViewDataSo
         
         self.setupTableview()
         
-//        self.arrDataSource = MCDatabaseHelper.sharedInstance.getAllCategorys()
+        self.arrDataSource = MCDatabaseHelper.sharedInstance.getAllChannel()
     }
     
     override func didReceiveMemoryWarning() {
@@ -34,7 +34,7 @@ class MCChannelManagementViewController: MCBaseViewController, UITableViewDataSo
     
     // MARK: - UI setup
     func setupTableview() {
-        self.tableview.register(UITableViewCell.self, forCellReuseIdentifier: "mc_setting_tableview_cell")
+        self.tableview.register(UITableViewCell.self, forCellReuseIdentifier: TABLEVIEW_CHANNEL_CELL_IDENTIFIER)
         self.tableview.delegate = self
         self.tableview.dataSource = self
         self.tableview.tableFooterView = UIView()
@@ -55,14 +55,14 @@ class MCChannelManagementViewController: MCBaseViewController, UITableViewDataSo
             if strInput?.isEmpty == false {
                 model.name = strInput
                 
-//                let result = MCDatabaseHelper.sharedInstance.insertCategory(model:model)
-//                if (result) {
-//                    // 插入成功， 异步更新UI
-//                    self.arrDataSource = MCDatabaseHelper.sharedInstance.getAllCategorys()
-//                    DispatchQueue.main.async {
-//                        self.tableview.reloadData()
-//                    }
-//                }
+                let result = MCDatabaseHelper.sharedInstance.insertChannel(model:model)
+                if (result) {
+                    // 插入成功， 异步更新UI
+                    self.arrDataSource = MCDatabaseHelper.sharedInstance.getAllChannel()
+                    DispatchQueue.main.async {
+                        self.tableview.reloadData()
+                    }
+                }
                 
             } else {
                 Log.debug?.message("名称不能为空")
@@ -86,10 +86,10 @@ class MCChannelManagementViewController: MCBaseViewController, UITableViewDataSo
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableview.dequeueReusableCell(withIdentifier: TABLEVIEW_CHANNEL_CELL_IDENTIFIER, for: indexPath)
         
-//        let channel:MCChannelModel = self.arrDataSource![indexPath.row] as! MCChannelModel
-//
-//        cell.textLabel?.text = channel.name
-//        cell.detailTextLabel?.text = "\(channel.channelId)"
+        let channel:MCChannelModel = self.arrDataSource![indexPath.row] as! MCChannelModel
+
+        cell.textLabel?.text = channel.name
+        cell.detailTextLabel?.text = "\(channel.channelId)"
         
         cell.selectionStyle = .none
         cell.accessoryType = .disclosureIndicator

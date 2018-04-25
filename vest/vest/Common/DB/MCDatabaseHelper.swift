@@ -27,6 +27,7 @@ class MCDatabaseHelper: NSObject {
         // Create Table
         self.createTableStorage()
         self.createTableCategory()
+        self.createTableChannel()
     }
     
     private func connectDatabase(filePath: String) -> Void {
