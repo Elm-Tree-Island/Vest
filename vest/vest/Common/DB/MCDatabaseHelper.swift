@@ -188,4 +188,62 @@ class MCDatabaseHelper: NSObject {
         
         return true;
     }
+    
+    // END ===================== Category Table =========================
+    
+    // ===================== Category Table =========================
+    let TABLE_CHANNEL = Table("Channel")
+    let TABLE_CHANNEL_ID = Expression<Int64>("id")
+    let TABLE_CHANNEL_NAME = Expression<String>("name")
+    
+    /// Create table 'Storage'
+    func createTableChannel() -> Void {
+        do {
+            try dbConnection.run(TABLE_CHANNEL.create(ifNotExists: true) { t in
+                t.column(TABLE_CHANNEL_ID, primaryKey: .autoincrement)
+                t.column(TABLE_CHANNEL_NAME)
+            })
+        } catch {
+            Log.error?.message("Create table channel FAILED")
+        }
+    }
+    
+    func getAllChannel() -> NSArray {
+        let query = TABLE_CHANNEL.order(TABLE_CHANNEL_NAME.asc)
+        let arrResult = NSMutableArray()
+        
+        for item in (try! dbConnection.prepare(query)) {
+            let model = MCChannelModel()
+            model.channelId = item[TABLE_CHANNEL_ID]
+            model.name = item[TABLE_CHANNEL_NAME]
+            
+            arrResult.add(model)
+        }
+        
+        return arrResult
+    }
+    
+    func insertChannel(model:MCChannelModel) -> Bool {
+        do {
+            let rowID = try dbConnection.run(TABLE_CHANNEL.insert(TABLE_CHANNEL_NAME <- model.name))
+            Log.debug?.message("Insert channel successfully, new RowId = \(rowID)")
+        } catch {
+            Log.error?.message("Insert channel Failed, category name\(model.name)")
+            return false
+        }
+        return true
+    }
+    
+    func deleteChannel(channelId:Int64) -> Bool {
+        // TODO: 实现
+        let recordToDelete = TABLE_CHANNEL.filter(TABLE_CHANNEL_ID == channelId)
+        do {
+            try dbConnection.run(recordToDelete.delete())
+            Log.debug?.message("Delete channel record SUCCESSED, ID = \(channelId)")
+        } catch {
+            Log.error?.message("Delete channel record FAILED, ID = \(channelId)")
+        }
+        
+        return true;
+    }
 }
