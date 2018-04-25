@@ -96,5 +96,24 @@ class MCChannelManagementViewController: MCBaseViewController, UITableViewDataSo
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // 删除该Cell
+            let channelModel = self.arrDataSource![indexPath.row] as! MCChannelModel
+            if channelModel.channelId > 0 {
+                let result = MCDatabaseHelper.sharedInstance.deleteChannel(channelId: channelModel.channelId)
+                if result {     // 删除成功
+                    self.arrDataSource = MCDatabaseHelper.sharedInstance.getAllChannel()
+                    DispatchQueue.main.async {
+                        self.tableview.deleteRows(at: [indexPath], with: .automatic)
+                    }
+                } else {    // 删除失败
+                    
+                }
+            }
+            
+        }
+    }
 
 }
