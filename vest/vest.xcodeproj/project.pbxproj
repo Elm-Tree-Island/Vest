@@ -44,6 +44,7 @@
 		4DC2826C207B069100462A2D /* MCChannelManagementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DC2826A207B069100462A2D /* MCChannelManagementViewController.xib */; };
 		7FD936AD208E2348001ABC22 /* MCChannelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD936AC208E2348001ABC22 /* MCChannelModel.swift */; };
 		7FD936AF20921A1F001ABC22 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FD936AE20921A1F001ABC22 /* SQLite.framework */; };
+		7FD936B120921A8E001ABC22 /* CoreActionSheetPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FD936B020921A8D001ABC22 /* CoreActionSheetPicker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -99,6 +100,7 @@
 		4DC2826A207B069100462A2D /* MCChannelManagementViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCChannelManagementViewController.xib; sourceTree = "<group>"; };
 		7FD936AC208E2348001ABC22 /* MCChannelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCChannelModel.swift; sourceTree = "<group>"; };
 		7FD936AE20921A1F001ABC22 /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = ../Carthage/Build/iOS/SQLite.framework; sourceTree = "<group>"; };
+		7FD936B020921A8D001ABC22 /* CoreActionSheetPicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreActionSheetPicker.framework; path = ../Carthage/Build/iOS/CoreActionSheetPicker.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D775B86207DE3C80097CDD9 /* CleanroomLogger.framework in Frameworks */,
+				7FD936B120921A8E001ABC22 /* CoreActionSheetPicker.framework in Frameworks */,
 				4D775B91207DE3E70097CDD9 /* Result.framework in Frameworks */,
 				7FD936AF20921A1F001ABC22 /* SQLite.framework in Frameworks */,
 				4D775B8F207DE3E70097CDD9 /* ReactiveSwift.framework in Frameworks */,
@@ -227,6 +230,7 @@
 		4D52FF4020629D7900ABB17A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7FD936B020921A8D001ABC22 /* CoreActionSheetPicker.framework */,
 				7FD936AE20921A1F001ABC22 /* SQLite.framework */,
 				4D52FF4620639B7700ABB17A /* CleanroomLogger.framework */,
 				4D2A45DC205BBB2A00A2BE99 /* ReactiveSwift.framework */,
