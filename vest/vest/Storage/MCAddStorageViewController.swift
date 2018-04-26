@@ -9,6 +9,7 @@
 import UIKit
 import CleanroomLogger
 import AVFoundation
+import CoreActionSheetPicker
 
 struct Platform {
     static let isSimulator: Bool = {
@@ -138,7 +139,18 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
             self.present(alertController, animated: true, completion: nil)
             
         case 1:                 // 分类
-            // TODO: 后续添加分类
+            let allCategory:NSArray = MCDatabaseHelper.sharedInstance.getAllCategorys()
+            let allCategoryName = NSMutableArray()
+            for model in allCategory {
+                allCategoryName.add((model as! MCCategoryModel).name)
+            }
+            
+            ActionSheetStringPicker.show(withTitle: "选择分类", rows:  allCategoryName as! [Any], initialSelection: (allCategoryName.count / 2), doneBlock: {picker, indexes, values in
+                cell?.detailTextLabel?.text = values as? String
+            }, cancel: { ActionMultipleStringCancelBlock in
+                return
+            }, origin: cell)
+            
             break
             
         case 2:                 // 渠道
