@@ -26,8 +26,6 @@
 		4D775B8A207DE3C80097CDD9 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1C3AA220558CD20014DDE9 /* ReactiveCocoa.framework */; };
 		4D775B8B207DE3E70097CDD9 /* CleanroomLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D52FF4620639B7700ABB17A /* CleanroomLogger.framework */; };
 		4D775B8C207DE3E70097CDD9 /* CleanroomLogger.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D52FF4620639B7700ABB17A /* CleanroomLogger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4D775B8D207DE3E70097CDD9 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D52FF362061FB0A00ABB17A /* SQLite.framework */; };
-		4D775B8E207DE3E70097CDD9 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D52FF362061FB0A00ABB17A /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D775B8F207DE3E70097CDD9 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2A45DC205BBB2A00A2BE99 /* ReactiveSwift.framework */; };
 		4D775B90207DE3E70097CDD9 /* ReactiveSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2A45DC205BBB2A00A2BE99 /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D775B91207DE3E70097CDD9 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2A45D9205BBAF400A2BE99 /* Result.framework */; };
@@ -45,6 +43,7 @@
 		4DC2826B207B069100462A2D /* MCChannelManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC28269207B069100462A2D /* MCChannelManagementViewController.swift */; };
 		4DC2826C207B069100462A2D /* MCChannelManagementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DC2826A207B069100462A2D /* MCChannelManagementViewController.xib */; };
 		7FD936AD208E2348001ABC22 /* MCChannelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD936AC208E2348001ABC22 /* MCChannelModel.swift */; };
+		7FD936AF20921A1F001ABC22 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FD936AE20921A1F001ABC22 /* SQLite.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -54,7 +53,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4D775B8E207DE3E70097CDD9 /* SQLite.framework in Embed Frameworks */,
 				4D775B8C207DE3E70097CDD9 /* CleanroomLogger.framework in Embed Frameworks */,
 				4D775B90207DE3E70097CDD9 /* ReactiveSwift.framework in Embed Frameworks */,
 				4D775B92207DE3E70097CDD9 /* Result.framework in Embed Frameworks */,
@@ -84,7 +82,6 @@
 		4D2A45EA206001D600A2BE99 /* MCAddStorageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCAddStorageViewController.xib; sourceTree = "<group>"; };
 		4D2A45ED2060036F00A2BE99 /* MCStorageRecordDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCStorageRecordDetailViewController.swift; sourceTree = "<group>"; };
 		4D2A45EE2060036F00A2BE99 /* MCStorageRecordDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCStorageRecordDetailViewController.xib; sourceTree = "<group>"; };
-		4D52FF362061FB0A00ABB17A /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = ../Carthage/Build/iOS/SQLite.framework; sourceTree = "<group>"; };
 		4D52FF39206208A200ABB17A /* MCDatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCDatabaseHelper.swift; sourceTree = "<group>"; };
 		4D52FF4620639B7700ABB17A /* CleanroomLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CleanroomLogger.framework; path = ../Carthage/Build/iOS/CleanroomLogger.framework; sourceTree = "<group>"; };
 		4D52FF4A20639D0E00ABB17A /* MCBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCBaseViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +98,7 @@
 		4DC28269207B069100462A2D /* MCChannelManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCChannelManagementViewController.swift; sourceTree = "<group>"; };
 		4DC2826A207B069100462A2D /* MCChannelManagementViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCChannelManagementViewController.xib; sourceTree = "<group>"; };
 		7FD936AC208E2348001ABC22 /* MCChannelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCChannelModel.swift; sourceTree = "<group>"; };
+		7FD936AE20921A1F001ABC22 /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = ../Carthage/Build/iOS/SQLite.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,9 +106,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D775B8D207DE3E70097CDD9 /* SQLite.framework in Frameworks */,
 				4D775B86207DE3C80097CDD9 /* CleanroomLogger.framework in Frameworks */,
 				4D775B91207DE3E70097CDD9 /* Result.framework in Frameworks */,
+				7FD936AF20921A1F001ABC22 /* SQLite.framework in Frameworks */,
 				4D775B8F207DE3E70097CDD9 /* ReactiveSwift.framework in Frameworks */,
 				4D775B8B207DE3E70097CDD9 /* CleanroomLogger.framework in Frameworks */,
 				4D775B8A207DE3C80097CDD9 /* ReactiveCocoa.framework in Frameworks */,
@@ -229,8 +227,8 @@
 		4D52FF4020629D7900ABB17A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7FD936AE20921A1F001ABC22 /* SQLite.framework */,
 				4D52FF4620639B7700ABB17A /* CleanroomLogger.framework */,
-				4D52FF362061FB0A00ABB17A /* SQLite.framework */,
 				4D2A45DC205BBB2A00A2BE99 /* ReactiveSwift.framework */,
 				4D2A45D9205BBAF400A2BE99 /* Result.framework */,
 				4D1C3AA220558CD20014DDE9 /* ReactiveCocoa.framework */,
