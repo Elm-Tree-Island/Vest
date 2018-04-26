@@ -23,9 +23,6 @@
 		4D52FF4B20639D0E00ABB17A /* MCBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D52FF4A20639D0E00ABB17A /* MCBaseViewController.swift */; };
 		4D52FF4F2063D40A00ABB17A /* SwiftHEXColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D52FF4D2063D40900ABB17A /* SwiftHEXColors.swift */; };
 		4D775B86207DE3C80097CDD9 /* CleanroomLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D52FF4620639B7700ABB17A /* CleanroomLogger.framework */; };
-		4D775B87207DE3C80097CDD9 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D52FF362061FB0A00ABB17A /* SQLite.framework */; };
-		4D775B88207DE3C80097CDD9 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2A45DC205BBB2A00A2BE99 /* ReactiveSwift.framework */; };
-		4D775B89207DE3C80097CDD9 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2A45D9205BBAF400A2BE99 /* Result.framework */; };
 		4D775B8A207DE3C80097CDD9 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1C3AA220558CD20014DDE9 /* ReactiveCocoa.framework */; };
 		4D775B8B207DE3E70097CDD9 /* CleanroomLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D52FF4620639B7700ABB17A /* CleanroomLogger.framework */; };
 		4D775B8C207DE3E70097CDD9 /* CleanroomLogger.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D52FF4620639B7700ABB17A /* CleanroomLogger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -35,7 +32,6 @@
 		4D775B90207DE3E70097CDD9 /* ReactiveSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2A45DC205BBB2A00A2BE99 /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D775B91207DE3E70097CDD9 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2A45D9205BBAF400A2BE99 /* Result.framework */; };
 		4D775B92207DE3E70097CDD9 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2A45D9205BBAF400A2BE99 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4D775B93207DE3E70097CDD9 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1C3AA220558CD20014DDE9 /* ReactiveCocoa.framework */; };
 		4D775B94207DE3E70097CDD9 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1C3AA220558CD20014DDE9 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D775B98207EF2900097CDD9 /* MCAboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D775B96207EF2900097CDD9 /* MCAboutMeViewController.swift */; };
 		4D775B99207EF2900097CDD9 /* MCAboutMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D775B97207EF2900097CDD9 /* MCAboutMeViewController.xib */; };
@@ -114,14 +110,10 @@
 			files = (
 				4D775B8D207DE3E70097CDD9 /* SQLite.framework in Frameworks */,
 				4D775B86207DE3C80097CDD9 /* CleanroomLogger.framework in Frameworks */,
-				4D775B87207DE3C80097CDD9 /* SQLite.framework in Frameworks */,
 				4D775B91207DE3E70097CDD9 /* Result.framework in Frameworks */,
 				4D775B8F207DE3E70097CDD9 /* ReactiveSwift.framework in Frameworks */,
-				4D775B88207DE3C80097CDD9 /* ReactiveSwift.framework in Frameworks */,
 				4D775B8B207DE3E70097CDD9 /* CleanroomLogger.framework in Frameworks */,
-				4D775B89207DE3C80097CDD9 /* Result.framework in Frameworks */,
 				4D775B8A207DE3C80097CDD9 /* ReactiveCocoa.framework in Frameworks */,
-				4D775B93207DE3E70097CDD9 /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,7 +537,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ENNJNCUK8H;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = vest/Info.plist;
@@ -565,7 +557,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ENNJNCUK8H;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = vest/Info.plist;
