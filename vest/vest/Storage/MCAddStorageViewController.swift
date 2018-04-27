@@ -15,7 +15,7 @@ struct Platform {
     static let isSimulator: Bool = {
         var isSim = false
         #if arch(i386) || arch(x86_64)
-            isSim = true
+        isSim = true
         #endif
         return isSim
     }()
@@ -35,7 +35,7 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
         
         // Init Data
         self.modelToSave = MCStorageRecordModel()
-
+        
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .done, target: self, action: #selector(onSaveStorage))
         
         self.setupTableview()
@@ -53,7 +53,7 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
         let tapGR = UITapGestureRecognizer(target: self, action: #selector(onTapImageView))
         self.ivProductPic.addGestureRecognizer(tapGR)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -82,7 +82,7 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
             self.imagePickerController.modalTransitionStyle = .flipHorizontal
             self.imagePickerController.allowsEditing = true
             self.imagePickerController.sourceType = .camera
-//            self.imagePickerController.mediaTypes =
+            //            self.imagePickerController.mediaTypes =
         }
     }
     
@@ -108,7 +108,7 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
         })
         
     }
-
+    
     // MARK: - UITableViewDelegate Methods
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         Log.debug?.message("点击了cell, \(indexPath.row)")
@@ -146,19 +146,19 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
                 Log.debug?.message("没有类别可选，请在设置页面添加")
                 // TODO: 添加提示Toast
             } else {
-            
-            for model in allCategory {
-                allCategoryName.add((model as! MCCategoryModel).name)
-            }
-            
-            ActionSheetStringPicker.show(withTitle: "选择分类", rows:  allCategoryName as! [Any], initialSelection: (allCategoryName.count / 2), doneBlock: {picker, indexes, values in
-                let categoryName = values as? NSString
-                cell?.detailTextLabel?.text = categoryName! as String
-                // TODO: 保存类别数据到Model和数据库中
+                // 选择类别
+                for model in allCategory {
+                    allCategoryName.add((model as! MCCategoryModel).name)
+                }
                 
-            }, cancel: { ActionMultipleStringCancelBlock in
-                return
-            }, origin: cell)
+                ActionSheetStringPicker.show(withTitle: "选择分类", rows:  allCategoryName as! [Any], initialSelection: (allCategoryName.count / 2), doneBlock: {picker, indexes, values in
+                    let categoryName = values as? NSString
+                    cell?.detailTextLabel?.text = categoryName! as String
+                    // TODO: 保存类别数据到Model和数据库中
+                    
+                }, cancel: { ActionMultipleStringCancelBlock in
+                    return
+                }, origin: cell)
                 
             }
             
@@ -172,6 +172,7 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
                 Log.debug?.message("没有渠道可选，请在设置页面添加")
                 // TODO: 添加提示Toast
             } else {
+                // 选择渠道
                 for model in allChannel {
                     allChannelName.add((model as! MCChannelModel).name)
                 }
@@ -186,7 +187,6 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
                 }, origin: cell)
                 
             }
-            // TODO: 选择渠道
             break
             
         case 3:                 // 进货价格
@@ -324,7 +324,7 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
             
             cell?.accessoryType = .disclosureIndicator
         }
-
+        
         return cell!
     }
     
@@ -337,7 +337,7 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
         if mediaType == "public.image" as String {
             //获取到拍摄的照片, UIImagePickerControllerEditedImage是经过剪裁过的照片,UIImagePickerControllerOriginalImage是原始的照片
             let image = info[UIImagePickerControllerEditedImage] as! UIImage
-
+            
             //调用方法保存到图像库中
             UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
             self.ivProductPic.image = image
