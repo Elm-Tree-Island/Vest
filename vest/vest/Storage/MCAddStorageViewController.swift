@@ -141,19 +141,51 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
         case 1:                 // 分类
             let allCategory:NSArray = MCDatabaseHelper.sharedInstance.getAllCategorys()
             let allCategoryName = NSMutableArray()
+            
+            if allCategory.count == 0 {
+                Log.debug?.message("没有类别可选，请在设置页面添加")
+                // TODO: 添加提示Toast
+            } else {
+            
             for model in allCategory {
                 allCategoryName.add((model as! MCCategoryModel).name)
             }
             
             ActionSheetStringPicker.show(withTitle: "选择分类", rows:  allCategoryName as! [Any], initialSelection: (allCategoryName.count / 2), doneBlock: {picker, indexes, values in
-                cell?.detailTextLabel?.text = values as? String
+                let categoryName = values as? NSString
+                cell?.detailTextLabel?.text = categoryName! as String
+                // TODO: 保存类别数据到Model和数据库中
+                
             }, cancel: { ActionMultipleStringCancelBlock in
                 return
             }, origin: cell)
+                
+            }
             
             break
             
         case 2:                 // 渠道
+            let allChannel:NSArray = MCDatabaseHelper.sharedInstance.getAllChannel()
+            let allChannelName = NSMutableArray()
+            
+            if allChannel.count == 0 {
+                Log.debug?.message("没有渠道可选，请在设置页面添加")
+                // TODO: 添加提示Toast
+            } else {
+                for model in allChannel {
+                    allChannelName.add((model as! MCChannelModel).name)
+                }
+                
+                ActionSheetStringPicker.show(withTitle: "选择渠道", rows:  allChannelName as! [Any], initialSelection: (allChannelName.count / 2), doneBlock: {picker, indexes, values in
+                    let channelName = values as? NSString
+                    cell?.detailTextLabel?.text = channelName! as String
+                    // TODO: 保存渠道数据到Model和数据库中
+                    
+                }, cancel: { ActionMultipleStringCancelBlock in
+                    return
+                }, origin: cell)
+                
+            }
             // TODO: 选择渠道
             break
             
