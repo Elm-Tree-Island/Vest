@@ -12,3 +12,6 @@ github "emaloney/CleanroomLogger" ~> 6.0.0
 
 # ActionSheetPicker
 github "skywinder/ActionSheetPicker-3.0"
+
+# HUD
+github "stackhou/SwiftProgressHUD"
