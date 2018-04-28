@@ -10,6 +10,7 @@ import UIKit
 import CleanroomLogger
 import AVFoundation
 import CoreActionSheetPicker
+import SwiftProgressHUD
 
 struct Platform {
     static let isSimulator: Bool = {
@@ -144,7 +145,7 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
             
             if allCategory.count == 0 {
                 Log.debug?.message("没有类别可选，请在设置页面添加")
-                // TODO: 添加提示Toast
+                SwiftProgressHUD.showOnlyText("没有类别可选，请在设置页面添加")
             } else {
                 // 选择类别
                 for model in allCategory {
@@ -170,7 +171,8 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
             
             if allChannel.count == 0 {
                 Log.debug?.message("没有渠道可选，请在设置页面添加")
-                // TODO: 添加提示Toast
+                // 添加提示
+                SwiftProgressHUD.showOnlyText("没有渠道可选，请在设置页面添加")
             } else {
                 // 选择渠道
                 for model in allChannel {
