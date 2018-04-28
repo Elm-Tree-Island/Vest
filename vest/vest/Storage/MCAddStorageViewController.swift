@@ -152,10 +152,10 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
                 }
                 
                 ActionSheetStringPicker.show(withTitle: "选择分类", rows:  allCategoryName as! [Any], initialSelection: (allCategoryName.count / 2), doneBlock: {picker, indexes, values in
-                    let categoryName = values as? NSString
-                    cell?.detailTextLabel?.text = categoryName! as String
-                    // TODO: 保存类别数据到Model和数据库中
-                    
+                    let categoryName = values as? String
+                    cell?.detailTextLabel?.text = categoryName!
+                    // 保存类别数据到Model和数据库中
+                    self.modelToSave?.category = categoryName
                 }, cancel: { ActionMultipleStringCancelBlock in
                     return
                 }, origin: cell)
@@ -178,10 +178,10 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
                 }
                 
                 ActionSheetStringPicker.show(withTitle: "选择渠道", rows:  allChannelName as! [Any], initialSelection: (allChannelName.count / 2), doneBlock: {picker, indexes, values in
-                    let channelName = values as? NSString
+                    let channelName = values as? String
                     cell?.detailTextLabel?.text = channelName! as String
-                    // TODO: 保存渠道数据到Model和数据库中
-                    
+                    // 保存渠道数据到Model和数据库中
+                    self.modelToSave?.channel = channelName
                 }, cancel: { ActionMultipleStringCancelBlock in
                     return
                 }, origin: cell)

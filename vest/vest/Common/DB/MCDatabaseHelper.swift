@@ -45,6 +45,9 @@ class MCDatabaseHelper: NSObject {
     let TABLE_STORAGE_ID = Expression<Int64>("id")
     let TABLE_STORAGE_NAME = Expression<String>("name")
     
+    let TABLE_STORAGE_CATEGORY = Expression<String>("category")
+    let TABLE_STORAGE_CHANNEL = Expression<String>("channel")
+    
     let TABLE_STORAGE_COST = Expression<Double>("cost")
     let TABLE_STORAGE_PRICE = Expression<Double>("price")
     let TABLE_STORAGE_OTHER_COST = Expression<Double>("other_cost")
@@ -62,6 +65,9 @@ class MCDatabaseHelper: NSObject {
             try dbConnection.run(TABLE_STORAGE.create(ifNotExists: true) { t in
                 t.column(TABLE_STORAGE_ID, primaryKey: .autoincrement)
                 t.column(TABLE_STORAGE_NAME)
+                
+                t.column(TABLE_STORAGE_CATEGORY)
+                t.column(TABLE_STORAGE_CHANNEL)
                 
                 t.column(TABLE_STORAGE_COST)
                 t.column(TABLE_STORAGE_PRICE)
@@ -91,6 +97,9 @@ class MCDatabaseHelper: NSObject {
             recordModel.recordId = item[TABLE_STORAGE_ID]
             recordModel.name = item[TABLE_STORAGE_NAME]
             
+            recordModel.category = item[TABLE_STORAGE_CATEGORY]
+            recordModel.channel = item[TABLE_STORAGE_CHANNEL]
+            
             recordModel.cost = item[TABLE_STORAGE_COST]
             recordModel.price = item[TABLE_STORAGE_PRICE]
             recordModel.otherCost = item[TABLE_STORAGE_OTHER_COST]
@@ -114,6 +123,8 @@ class MCDatabaseHelper: NSObject {
     func insertStorageRecord(storageModel:MCStorageRecordModel) -> Bool {
         do {
             let rowID = try dbConnection.run(TABLE_STORAGE.insert(TABLE_STORAGE_NAME <- storageModel.name,
+                                                                  TABLE_STORAGE_CATEGORY <- storageModel.category,
+                                                                  TABLE_STORAGE_CHANNEL <- storageModel.channel,
                                                                   TABLE_STORAGE_COST <- storageModel.cost!,
                                                                   TABLE_STORAGE_PRICE <- storageModel.price!,
                                                                   TABLE_STORAGE_OTHER_COST <- storageModel.otherCost!,

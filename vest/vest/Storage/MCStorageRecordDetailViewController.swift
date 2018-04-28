@@ -45,25 +45,25 @@ class MCStorageRecordDetailViewController: MCBaseViewController, UITableViewDele
             switch indexPath.row {
             case 0:
                 cell?.textLabel?.text = "名称"
-                cell?.detailTextLabel?.text = self.productModel?.name;
+                cell?.detailTextLabel?.text = self.productModel?.name
             case 1:
                 cell?.textLabel?.text = "分类"
-                
+                cell?.detailTextLabel?.text = self.productModel?.category
             case 2:
                 cell?.textLabel?.text = "渠道"
-                
+                cell?.detailTextLabel?.text = self.productModel?.channel
             case 3:
                 cell?.textLabel?.text = "进价(RMB)"
-                cell?.detailTextLabel?.text = String.init(format: "%.2f", (self.productModel?.cost)!);
+                cell?.detailTextLabel?.text = String.init(format: "%.2f", (self.productModel?.cost)!)
             case 4:
                 cell?.textLabel?.text = "数量"
                 cell?.detailTextLabel?.text = "\(self.productModel?.totalCount ?? 0)"
             case 5:
                 cell?.textLabel?.text = "其他成本(RMB)"
-                cell?.detailTextLabel?.text = String.init(format: "%.2f", (self.productModel?.otherCost)!);
+                cell?.detailTextLabel?.text = String.init(format: "%.2f", (self.productModel?.otherCost)!)
             case 6:
                 cell?.textLabel?.text = "售价(RMB)"
-                cell?.detailTextLabel?.text = String.init(format: "%.2f", (self.productModel?.price)!);
+                cell?.detailTextLabel?.text = String.init(format: "%.2f", (self.productModel?.price)!)
             default:
                 cell?.textLabel?.text = "单品毛利(RMB)"
                 let totalCount:Int = Int((self.productModel?.totalCount)!)

@@ -13,6 +13,9 @@ class MCStorageRecordModel: NSObject {
 
     var name:String! = ""                           // 货品名称
     
+    var category:String! = ""
+    var channel:String! = ""
+    
     var cost:Double? = 0.0                          // 成本价格
     var price:Double? = 0.0                         // 售价
     var otherCost:Double? = 0.0                     // 其他费用
