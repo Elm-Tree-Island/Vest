@@ -72,7 +72,7 @@ class MCStorageRecordDetailViewController: MCBaseViewController, UITableViewDele
                     let prifitSingle:Double = (self.productModel?.price)! - (self.productModel?.cost)!;
                     singleGrossProfit = (prifitSingle * Double(totalCount) - (self.productModel?.otherCost)!) / Double(totalCount);
                 }
-                cell?.detailTextLabel?.text = "\(singleGrossProfit)"
+                cell?.detailTextLabel?.text = String.init(format: "%.2f", singleGrossProfit)
             }
             
             cell?.accessoryType = .disclosureIndicator
