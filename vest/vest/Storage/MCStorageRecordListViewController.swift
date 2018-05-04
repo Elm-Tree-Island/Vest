@@ -79,4 +79,5 @@ class MCStorageRecordListViewController: MCBaseViewController, UITableViewDataSo
         detailVC.productModel = self.arrDatasource?.object(at: indexPath.row) as? MCStorageRecordModel
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
+
 }

@@ -11,6 +11,7 @@ import CleanroomLogger
 import AVFoundation
 import CoreActionSheetPicker
 import SwiftProgressHUD
+import Photos
 
 struct Platform {
     static let isSimulator: Bool = {
@@ -26,6 +27,7 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
     
     var modelToSave:MCStorageRecordModel?
     var imagePickerController:UIImagePickerController!
+    var imageLocalID:String?                                // 拍照后图片保存到本地的图片ID，用于查找图片
     
     @IBOutlet weak var ivProductPic: UIImageView!
     @IBOutlet weak var tableView: UITableView!
@@ -81,9 +83,7 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
             self.imagePickerController = UIImagePickerController()
             self.imagePickerController.delegate = self
             self.imagePickerController.modalTransitionStyle = .flipHorizontal
-            self.imagePickerController.allowsEditing = true
             self.imagePickerController.sourceType = .camera
-            //            self.imagePickerController.mediaTypes =
         }
     }
     
@@ -338,13 +338,29 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
         //如果媒体是照片
         if mediaType == "public.image" as String {
             //获取到拍摄的照片, UIImagePickerControllerEditedImage是经过剪裁过的照片,UIImagePickerControllerOriginalImage是原始的照片
-            let image = info[UIImagePickerControllerEditedImage] as! UIImage
+            let image = info[UIImagePickerControllerOriginalImage] as! UIImage
             
             //调用方法保存到图像库中
-            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-            self.ivProductPic.image = image
-            
-            // TODO: 获取图片ID或URL，保存到Model
+            PHPhotoLibrary.shared().performChanges({
+                let result = PHAssetChangeRequest.creationRequestForAsset(from: image)
+                let assetPlaceholder = result.placeholderForCreatedAsset
+                //保存标志符
+                self.imageLocalID = assetPlaceholder?.localIdentifier
+            }) { (isSuccess: Bool, error: Error?) in
+                if isSuccess {
+                    Log.debug?.message("保存图片成功, ID = \(self.imageLocalID ?? "")")
+
+                    // 获取图片ID或URL，保存到Model
+                    self.modelToSave?.picUrl = self.imageLocalID
+                    // 更新UI
+                    DispatchQueue.main.async {
+                        self.ivProductPic.image = image
+                    }
+                } else {
+                    Log.error?.message("保存图片失败")
+                    SwiftProgressHUD.showFail("保存失败", autoClear: true, autoClearTime: 2)
+                }
+            }
         }
         self.dismiss(animated: true, completion: nil)
     }
@@ -352,7 +368,4 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         self.dismiss(animated: true, completion: nil)
     }
-    
-    // MARK: - UINavigationControllerDelegate
-    
 }

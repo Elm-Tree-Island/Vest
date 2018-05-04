@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Photos
 
 class StorageRecordTableViewCell: UITableViewCell {
     
@@ -33,7 +34,8 @@ class StorageRecordTableViewCell: UITableViewCell {
     }
     
     func configWithModel(_ model:MCStorageRecordModel) {
-        // TODO: Set Icon image
+        // Set Icon image
+        self.ivProductPic?.image = self.getImageThumbByLocalID(model.picUrl)
         
         self.lblName.text = model.name
         
@@ -53,6 +55,84 @@ class StorageRecordTableViewCell: UITableViewCell {
         let formater = DateFormatter();
         formater.dateFormat = "yyyy-MM-dd HH:mm:ss"
         self.lblTime.text = formater.string(from: model.time)
+    }
+    
+    // MARK: - 工具方法
+    
+    /// 通过Image Local ID获取图片文件路径
+    ///
+    /// - Parameter imageLocalID: String, local image ID
+    /// - Returns: String Image file path
+    func getImagePathByLocalID(_ imageLocalID:String) -> String? {
+        var imagePath:String? = nil
+        //通过标志符获取对应的资源
+        let assetResult = PHAsset.fetchAssets(withLocalIdentifiers: [imageLocalID], options: nil)
+        let asset = assetResult[0]
+        let options = PHContentEditingInputRequestOptions()
+        options.canHandleAdjustmentData = {(adjustmeta: PHAdjustmentData)
+            -> Bool in
+            return true
+        }
+        //获取保存的图片路径
+        asset.requestContentEditingInput(with: options, completionHandler: {
+            (contentEditingInput:PHContentEditingInput?, info: [AnyHashable : Any]) in
+            imagePath = contentEditingInput!.fullSizeImageURL?.absoluteString
+        })
+        
+        return imagePath
+    }
+    
+    
+    /// Get origin image by image local ID
+    ///
+    /// - Parameter imageLocalID: String Image local ID
+    /// - Returns: UIImage
+    func getOriginImageByLocalID(_ imageLocalID:String) -> UIImage? {
+        var resultImage:UIImage? = nil
+        
+        //通过标志符获取对应的资源
+        let assetResult = PHAsset.fetchAssets(withLocalIdentifiers: [imageLocalID], options: nil)
+        let asset = assetResult[0]
+        let options = PHContentEditingInputRequestOptions()
+        options.canHandleAdjustmentData = {(adjustmeta: PHAdjustmentData)
+            -> Bool in
+            return true
+        }
+        
+        //获取保存的原图
+        PHImageManager.default().requestImage(for: asset,
+                                              targetSize: PHImageManagerMaximumSize, contentMode: .aspectFit,
+                                              options: nil, resultHandler: { (image, _:[AnyHashable : Any]?) in
+                                                resultImage = image
+                                                print("获取原图成功")
+        })
+        
+        return resultImage
+    }
+    
+    /// Get origin image thumb by image local ID
+    ///
+    /// - Parameter imageLocalID: String Image local ID
+    /// - Returns: UIImage
+    func getImageThumbByLocalID(_ imageLocalID:String) -> UIImage? {
+        var resultImage:UIImage? = nil
+        
+        //通过标志符获取对应的资源
+        let assetResult = PHAsset.fetchAssets(withLocalIdentifiers: [imageLocalID], options: nil)
+        let asset = assetResult[0]
+        let options = PHContentEditingInputRequestOptions()
+        options.canHandleAdjustmentData = {(adjustmeta: PHAdjustmentData)
+            -> Bool in
+            return true
+        }
+        //获取保存的缩略图
+        PHImageManager.default().requestImage(for: asset,
+                                              targetSize: CGSize(width:300, height:300), contentMode: .aspectFit,
+                                              options: nil, resultHandler: { (image, _:[AnyHashable : Any]?) in
+                                                resultImage = image
+        })
+        
+        return resultImage
     }
     
 }
