@@ -21,6 +21,15 @@ class MCStorageRecordDetailViewController: MCBaseViewController, UITableViewDele
     
         self.tableView.tableFooterView = UIView(frame: CGRect.zero)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // 展示商品图片
+        MCPhotoHelper.getImageThumbByLocalID((self.productModel?.picUrl)!, rHandler: { (image, obj) in
+            self.ivProductPic.image = image
+        })
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

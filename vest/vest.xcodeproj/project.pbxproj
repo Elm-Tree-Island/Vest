@@ -13,6 +13,7 @@
 		4D049253209BF186007AE4E8 /* SwiftProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D049251209BF168007AE4E8 /* SwiftProgressHUD.framework */; };
 		4D049254209BF186007AE4E8 /* SwiftProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D049251209BF168007AE4E8 /* SwiftProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D049256209BF3BA007AE4E8 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D049255209BF3BA007AE4E8 /* Photos.framework */; };
+		4D049259209C0FCE007AE4E8 /* MCPhotoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D049258209C0FCE007AE4E8 /* MCPhotoHelper.swift */; };
 		4D1C3A51205223470014DDE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C3A50205223470014DDE9 /* AppDelegate.swift */; };
 		4D1C3A5A205223470014DDE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D1C3A59205223470014DDE9 /* Assets.xcassets */; };
 		4D2A45C420596E3500A2BE99 /* MCStorageRecordListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2A45C220596E3500A2BE99 /* MCStorageRecordListViewController.swift */; };
@@ -74,6 +75,7 @@
 /* Begin PBXFileReference section */
 		4D049251209BF168007AE4E8 /* SwiftProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftProgressHUD.framework; path = ../Carthage/Build/iOS/SwiftProgressHUD.framework; sourceTree = "<group>"; };
 		4D049255209BF3BA007AE4E8 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		4D049258209C0FCE007AE4E8 /* MCPhotoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCPhotoHelper.swift; sourceTree = "<group>"; };
 		4D1C3A4D205223470014DDE9 /* VEST.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VEST.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D1C3A50205223470014DDE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D1C3A57205223470014DDE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -131,6 +133,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D049257209C0F8E007AE4E8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4D049258209C0FCE007AE4E8 /* MCPhotoHelper.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		4D1C3A44205223470014DDE9 = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +273,7 @@
 		4D52FF4920639CE400ABB17A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4D049257209C0F8E007AE4E8 /* UI */,
 				4D52FF4C2063D3F600ABB17A /* Color */,
 				4D52FF4820639C7B00ABB17A /* Base */,
 				4D52FF382062073100ABB17A /* DB */,
@@ -401,6 +412,7 @@
 				7FD936AD208E2348001ABC22 /* MCChannelModel.swift in Sources */,
 				4D775B98207EF2900097CDD9 /* MCAboutMeViewController.swift in Sources */,
 				4D775BC52082506D0097CDD9 /* MCSummaryViewController.swift in Sources */,
+				4D049259209C0FCE007AE4E8 /* MCPhotoHelper.swift in Sources */,
 				4D52FF4B20639D0E00ABB17A /* MCBaseViewController.swift in Sources */,
 				4DC2826B207B069100462A2D /* MCChannelManagementViewController.swift in Sources */,
 				4D2A45C7205974EE00A2BE99 /* MCSellRecordListViewController.swift in Sources */,
