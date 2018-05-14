@@ -63,7 +63,7 @@ class MCStorageRecordListViewController: MCBaseViewController, UITableViewDataSo
         let cellIdentifier = "storage_record_cell_identifier"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         
-        // TODO: INIT Data
+        // INIT Data
         let cellStorage = cell as? StorageRecordTableViewCell
         cellStorage?.configWithModel(self.arrDatasource?.object(at: indexPath.row) as! MCStorageRecordModel)
         
