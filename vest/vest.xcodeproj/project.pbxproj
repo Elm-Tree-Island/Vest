@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D030C1B20AA6FF0005E52CC /* MCConsumerManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D030C1920AA6FF0005E52CC /* MCConsumerManagementViewController.swift */; };
+		4D030C1C20AA6FF0005E52CC /* MCConsumerManagementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D030C1A20AA6FF0005E52CC /* MCConsumerManagementViewController.xib */; };
 		4D04924D209BF0EE007AE4E8 /* CoreActionSheetPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FD936B020921A8D001ABC22 /* CoreActionSheetPicker.framework */; };
 		4D04924E209BF0EE007AE4E8 /* CoreActionSheetPicker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7FD936B020921A8D001ABC22 /* CoreActionSheetPicker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D049250209BF105007AE4E8 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7FD936AE20921A1F001ABC22 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -73,6 +75,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4D030C1920AA6FF0005E52CC /* MCConsumerManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCConsumerManagementViewController.swift; sourceTree = "<group>"; };
+		4D030C1A20AA6FF0005E52CC /* MCConsumerManagementViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCConsumerManagementViewController.xib; sourceTree = "<group>"; };
 		4D049251209BF168007AE4E8 /* SwiftProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftProgressHUD.framework; path = ../Carthage/Build/iOS/SwiftProgressHUD.framework; sourceTree = "<group>"; };
 		4D049255209BF3BA007AE4E8 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		4D049258209C0FCE007AE4E8 /* MCPhotoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCPhotoHelper.swift; sourceTree = "<group>"; };
@@ -218,6 +222,8 @@
 				4D775B97207EF2900097CDD9 /* MCAboutMeViewController.xib */,
 				4D775B9A207EFA1A0097CDD9 /* MCPrivacyViewController.swift */,
 				4D775B9B207EFA1A0097CDD9 /* MCPrivacyViewController.xib */,
+				4D030C1920AA6FF0005E52CC /* MCConsumerManagementViewController.swift */,
+				4D030C1A20AA6FF0005E52CC /* MCConsumerManagementViewController.xib */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -360,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D775B99207EF2900097CDD9 /* MCAboutMeViewController.xib in Resources */,
+				4D030C1C20AA6FF0005E52CC /* MCConsumerManagementViewController.xib in Resources */,
 				4D2A45D6205BB69D00A2BE99 /* Main.storyboard in Resources */,
 				4D2A45F02060036F00A2BE99 /* MCStorageRecordDetailViewController.xib in Resources */,
 				4DC2826C207B069100462A2D /* MCChannelManagementViewController.xib in Resources */,
@@ -423,6 +430,7 @@
 				4DAB14B1207A082D007CBD54 /* MCCategoryManageViewController.swift in Sources */,
 				4D52FF3A206208A200ABB17A /* MCDatabaseHelper.swift in Sources */,
 				4D2A45C420596E3500A2BE99 /* MCStorageRecordListViewController.swift in Sources */,
+				4D030C1B20AA6FF0005E52CC /* MCConsumerManagementViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

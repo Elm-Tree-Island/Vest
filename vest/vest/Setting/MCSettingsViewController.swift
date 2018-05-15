@@ -17,7 +17,7 @@ class MCSettingsViewController: MCBaseViewController, UITableViewDataSource, UIT
         super.viewDidLoad()
         self.navigationItem.title = "更多"
 
-        self.tableviewDatasource = [["类别管理", "渠道管理"],
+        self.tableviewDatasource = [["类别管理", "渠道管理", "客户管理"],
                                     ["隐私声明", "关于"]]
     }
 
@@ -63,6 +63,11 @@ class MCSettingsViewController: MCBaseViewController, UITableViewDataSource, UIT
                 
             case 1:         // 渠道管理
                 let controller = MCChannelManagementViewController()
+                controller.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(controller, animated: true)
+                
+            case 2:
+                let controller = MCConsumerManagementViewController()
                 controller.hidesBottomBarWhenPushed = true
                 self.navigationController?.pushViewController(controller, animated: true)
                 
