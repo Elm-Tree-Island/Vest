@@ -8,13 +8,19 @@
 
 import UIKit
 
-class MCConsumerManagementViewController: MCBaseViewController {
+let CELL_IDENTIFIER = "cell_consumer_management_identifier"
 
+class MCConsumerManagementViewController: MCBaseViewController, UITableViewDelegate, UITableViewDataSource {
+
+    @IBOutlet weak var tableview: UITableView!
+    var arrDatasource:NSArray!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "客户管理"
 
         // Do any additional setup after loading the view.
+        self.setupTableView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,15 +28,25 @@ class MCConsumerManagementViewController: MCBaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // MARK: - UI Init
+    func setupTableView() -> Void {
+        self.arrDatasource = ["123"]
+        
+        self.tableview.delegate = self
+        self.tableview.dataSource = self
+        
+        self.tableview .register(MCConsumerInfoTableViewCell.self, forCellReuseIdentifier: CELL_IDENTIFIER)
     }
-    */
-
+    
+    // MARK: - UITableViewDelegate
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableview.dequeueReusableCell(withIdentifier: CELL_IDENTIFIER, for: indexPath)
+        
+        return cell
+    }
+    
+    // MARK: - UITableViewDataSource
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.arrDatasource.count
+    }
 }
