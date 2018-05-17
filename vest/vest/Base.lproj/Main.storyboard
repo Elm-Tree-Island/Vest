@@ -12,7 +12,7 @@
         <!--进货-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" userLabel="进货" customClass="MCStorageRecordListViewController" customModule="VEST" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="库存" id="9pv-A4-QxB" userLabel="进货" customClass="MCStorageRecordListViewController" customModule="VEST" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qnh-cn-PuD"/>
                         <viewControllerLayoutGuide type="bottom" id="uci-zT-qwZ"/>
@@ -219,11 +219,11 @@
             </objects>
             <point key="canvasLocation" x="-1689" y="493"/>
         </scene>
-        <!--进货-->
+        <!--库存-->
         <scene sceneID="znZ-u2-vVh">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="1a0-WV-mlL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="进货" image="first" id="acW-dT-cKf"/>
+                <navigationController title="库存" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="1a0-WV-mlL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="库存" image="tab_icon_storage" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cAv-q1-Em6">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -238,11 +238,11 @@
             </objects>
             <point key="canvasLocation" x="748.79999999999995" y="-321.13943028485761"/>
         </scene>
-        <!--出货-->
+        <!--订单-->
         <scene sceneID="to4-kI-d1f">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UgK-BY-dUr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="出货" image="second" id="cPa-gy-q4n"/>
+                <navigationController title="订单" automaticallyAdjustsScrollViewInsets="NO" id="UgK-BY-dUr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="订单" image="tab_icon_sell_record" id="cPa-gy-q4n"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8UB-ne-yM6">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -260,8 +260,8 @@
         <!--统计-->
         <scene sceneID="A7n-Jo-CWg">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9He-XR-9kf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="统计" image="first" id="3WE-2D-G7F"/>
+                <navigationController title="统计" automaticallyAdjustsScrollViewInsets="NO" id="9He-XR-9kf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="统计" image="tab_icon_summary" id="3WE-2D-G7F"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y0X-uR-AFv">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -276,11 +276,11 @@
             </objects>
             <point key="canvasLocation" x="748.79999999999995" y="1080.3598200899551"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--更多-->
         <scene sceneID="bh2-Zd-sPC">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uB6-Es-BXu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="DeP-nF-wRC"/>
+                <navigationController title="更多" automaticallyAdjustsScrollViewInsets="NO" id="uB6-Es-BXu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="更多" image="tab_icon_more" id="DeP-nF-wRC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nGh-7y-p1w">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -297,7 +297,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="tab_icon_more" width="30" height="30"/>
+        <image name="tab_icon_sell_record" width="30" height="30"/>
+        <image name="tab_icon_storage" width="30" height="30"/>
+        <image name="tab_icon_summary" width="30" height="30"/>
     </resources>
 </document>

@@ -16,8 +16,7 @@ class MCStorageRecordListViewController: MCBaseViewController, UITableViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.title = "进货"
+        self.title = "库存"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped(_:)))
         
         // Setup UI
