@@ -9,7 +9,10 @@
 import UIKit
 
 class MCConsumerInfoTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var lblMobileNum: UILabel!
+    @IBOutlet weak var lblAddress: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

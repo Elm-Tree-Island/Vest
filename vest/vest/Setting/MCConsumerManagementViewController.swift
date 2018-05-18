@@ -42,7 +42,13 @@ class MCConsumerManagementViewController: MCBaseViewController, UITableViewDeleg
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableview.dequeueReusableCell(withIdentifier: CELL_IDENTIFIER, for: indexPath)
         
+        // TODO: 填充数据
+        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 78;
     }
     
     // MARK: - UITableViewDataSource
