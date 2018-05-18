@@ -18,6 +18,7 @@ class MCConsumerManagementViewController: MCBaseViewController, UITableViewDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "客户管理"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped(_:)))
 
         self.setupTableView()
         
@@ -27,6 +28,12 @@ class MCConsumerManagementViewController: MCBaseViewController, UITableViewDeleg
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: - Event Handling
+    @objc func addTapped(_ sender:UIBarButtonItem) {
+        let controller = MCAddConsumerViewController()
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     // MARK: - UI Init

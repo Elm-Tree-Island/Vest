@@ -53,6 +53,10 @@
 		4DC2826B207B069100462A2D /* MCChannelManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC28269207B069100462A2D /* MCChannelManagementViewController.swift */; };
 		4DC2826C207B069100462A2D /* MCChannelManagementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DC2826A207B069100462A2D /* MCChannelManagementViewController.xib */; };
 		4DCF7DE920AE70CE007DD7C0 /* MCConsumerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCF7DE820AE70CE007DD7C0 /* MCConsumerModel.swift */; };
+		4DCF7DEC20AEBF02007DD7C0 /* MCAddConsumerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCF7DEA20AEBF02007DD7C0 /* MCAddConsumerViewController.swift */; };
+		4DCF7DED20AEBF02007DD7C0 /* MCAddConsumerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DCF7DEB20AEBF02007DD7C0 /* MCAddConsumerViewController.xib */; };
+		4DCF7DF120AED4E9007DD7C0 /* MCInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCF7DEF20AED4E9007DD7C0 /* MCInputTableViewCell.swift */; };
+		4DCF7DF220AED4E9007DD7C0 /* MCInputTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DCF7DF020AED4E9007DD7C0 /* MCInputTableViewCell.xib */; };
 		7FD936AD208E2348001ABC22 /* MCChannelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD936AC208E2348001ABC22 /* MCChannelModel.swift */; };
 		7FD936AF20921A1F001ABC22 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FD936AE20921A1F001ABC22 /* SQLite.framework */; };
 /* End PBXBuildFile section */
@@ -119,6 +123,10 @@
 		4DC28269207B069100462A2D /* MCChannelManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCChannelManagementViewController.swift; sourceTree = "<group>"; };
 		4DC2826A207B069100462A2D /* MCChannelManagementViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCChannelManagementViewController.xib; sourceTree = "<group>"; };
 		4DCF7DE820AE70CE007DD7C0 /* MCConsumerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCConsumerModel.swift; sourceTree = "<group>"; };
+		4DCF7DEA20AEBF02007DD7C0 /* MCAddConsumerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCAddConsumerViewController.swift; sourceTree = "<group>"; };
+		4DCF7DEB20AEBF02007DD7C0 /* MCAddConsumerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCAddConsumerViewController.xib; sourceTree = "<group>"; };
+		4DCF7DEF20AED4E9007DD7C0 /* MCInputTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCInputTableViewCell.swift; sourceTree = "<group>"; };
+		4DCF7DF020AED4E9007DD7C0 /* MCInputTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCInputTableViewCell.xib; sourceTree = "<group>"; };
 		7FD936AC208E2348001ABC22 /* MCChannelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCChannelModel.swift; sourceTree = "<group>"; };
 		7FD936AE20921A1F001ABC22 /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = ../Carthage/Build/iOS/SQLite.framework; sourceTree = "<group>"; };
 		7FD936B020921A8D001ABC22 /* CoreActionSheetPicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreActionSheetPicker.framework; path = ../Carthage/Build/iOS/CoreActionSheetPicker.framework; sourceTree = "<group>"; };
@@ -163,6 +171,7 @@
 		4D049257209C0F8E007AE4E8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				4DCF7DEE20AED4C6007DD7C0 /* Cell */,
 				4D049258209C0FCE007AE4E8 /* MCPhotoHelper.swift */,
 			);
 			path = UI;
@@ -248,6 +257,8 @@
 				4D775B9B207EFA1A0097CDD9 /* MCPrivacyViewController.xib */,
 				4D030C1920AA6FF0005E52CC /* MCConsumerManagementViewController.swift */,
 				4D030C1A20AA6FF0005E52CC /* MCConsumerManagementViewController.xib */,
+				4DCF7DEA20AEBF02007DD7C0 /* MCAddConsumerViewController.swift */,
+				4DCF7DEB20AEBF02007DD7C0 /* MCAddConsumerViewController.xib */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -329,6 +340,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		4DCF7DEE20AED4C6007DD7C0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4DCF7DEF20AED4E9007DD7C0 /* MCInputTableViewCell.swift */,
+				4DCF7DF020AED4E9007DD7C0 /* MCInputTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -396,8 +416,10 @@
 				4D2A45D6205BB69D00A2BE99 /* Main.storyboard in Resources */,
 				4D2A45F02060036F00A2BE99 /* MCStorageRecordDetailViewController.xib in Resources */,
 				4DC2826C207B069100462A2D /* MCChannelManagementViewController.xib in Resources */,
+				4DCF7DF220AED4E9007DD7C0 /* MCInputTableViewCell.xib in Resources */,
 				4D1C3A5A205223470014DDE9 /* Assets.xcassets in Resources */,
 				4D2A45EC206001D600A2BE99 /* MCAddStorageViewController.xib in Resources */,
+				4DCF7DED20AEBF02007DD7C0 /* MCAddConsumerViewController.xib in Resources */,
 				4D2A45D4205A68D700A2BE99 /* StorageRecordTableViewCell.xib in Resources */,
 				4D775B9D207EFA1A0097CDD9 /* MCPrivacyViewController.xib in Resources */,
 				4DAB14B2207A082D007CBD54 /* MCCategoryManageViewController.xib in Resources */,
@@ -445,8 +467,10 @@
 				7FD936AD208E2348001ABC22 /* MCChannelModel.swift in Sources */,
 				4D775B98207EF2900097CDD9 /* MCAboutMeViewController.swift in Sources */,
 				4D775BC52082506D0097CDD9 /* MCSummaryViewController.swift in Sources */,
+				4DCF7DF120AED4E9007DD7C0 /* MCInputTableViewCell.swift in Sources */,
 				4D049259209C0FCE007AE4E8 /* MCPhotoHelper.swift in Sources */,
 				4D52FF4B20639D0E00ABB17A /* MCBaseViewController.swift in Sources */,
+				4DCF7DEC20AEBF02007DD7C0 /* MCAddConsumerViewController.swift in Sources */,
 				4DC2826B207B069100462A2D /* MCChannelManagementViewController.swift in Sources */,
 				4DCF7DE920AE70CE007DD7C0 /* MCConsumerModel.swift in Sources */,
 				4D2A45C7205974EE00A2BE99 /* MCSellRecordListViewController.swift in Sources */,
