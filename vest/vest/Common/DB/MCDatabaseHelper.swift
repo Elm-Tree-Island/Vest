@@ -28,6 +28,7 @@ class MCDatabaseHelper: NSObject {
         self.createTableStorage()
         self.createTableCategory()
         self.createTableChannel()
+        self.createTableConsumer()
     }
     
     private func connectDatabase(filePath: String) -> Void {
@@ -254,6 +255,67 @@ class MCDatabaseHelper: NSObject {
             Log.debug?.message("Delete channel record SUCCESSED, ID = \(channelId)")
         } catch {
             Log.error?.message("Delete channel record FAILED, ID = \(channelId)")
+        }
+        
+        return true;
+    }
+    
+    // ===================== Consumer Table =========================
+    let TABLE_CONSUMER = Table("Consumer")
+    let TABLE_CONSUMER_ID = Expression<Int64>("id")
+    let TABLE_CONSUMER_NAME = Expression<String>("name")
+    let TABLE_CONSUMER_MOBILE = Expression<String>("mobile")
+    let TABLE_CONSUMER_ADDRESS = Expression<String>("address")
+    
+    /// Create table 'Consumer'
+    func createTableConsumer() -> Void {
+        do {
+            try dbConnection.run(TABLE_CONSUMER.create(ifNotExists: true) { t in
+                t.column(TABLE_CONSUMER_ID, primaryKey: .autoincrement)
+                t.column(TABLE_CONSUMER_NAME)
+                t.column(TABLE_CONSUMER_MOBILE)
+                t.column(TABLE_CONSUMER_ADDRESS)
+            })
+        } catch {
+            Log.error?.message("Create table \(TABLE_CONSUMER) FAILED")
+        }
+    }
+    
+    func getAllConsumers() -> NSArray {
+        let query = TABLE_CONSUMER.order(TABLE_CONSUMER_NAME.asc)
+        let arrResult = NSMutableArray()
+        
+        for item in (try! dbConnection.prepare(query)) {
+            let model = MCConsumerModel()
+            model.consumerId = item[TABLE_CONSUMER_ID]
+            model.name = item[TABLE_CONSUMER_NAME]
+            model.mobileNumber = item[TABLE_CONSUMER_MOBILE]
+            model.address = item[TABLE_CONSUMER_ADDRESS]
+            
+            arrResult.add(model)
+        }
+        
+        return arrResult
+    }
+    
+    func insertConsumer(model:MCConsumerModel) -> Bool {
+        do {
+            let rowID = try dbConnection.run(TABLE_CONSUMER.insert(TABLE_CONSUMER_NAME <- model.name!, TABLE_CONSUMER_MOBILE <- model.mobileNumber!, TABLE_CONSUMER_ADDRESS <- model.address!))
+            Log.debug?.message("Insert consumer successfully, new RowId = \(rowID)")
+        } catch {
+            Log.error?.message("Insert consumer Failed, category name\(model.name!)")
+            return false
+        }
+        return true
+    }
+    
+    func deleteConsumer(consumerId:Int64) -> Bool {
+        let recordToDelete = TABLE_CONSUMER.filter(TABLE_CONSUMER_ID == consumerId)
+        do {
+            try dbConnection.run(recordToDelete.delete())
+            Log.debug?.message("Delete consumer record SUCCESSED, ID = \(consumerId)")
+        } catch {
+            Log.error?.message("Delete consumer record FAILED, ID = \(consumerId)")
         }
         
         return true;

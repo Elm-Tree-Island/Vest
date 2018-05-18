@@ -52,6 +52,7 @@
 		4DAB14B2207A082D007CBD54 /* MCCategoryManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DAB14B0207A082D007CBD54 /* MCCategoryManageViewController.xib */; };
 		4DC2826B207B069100462A2D /* MCChannelManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC28269207B069100462A2D /* MCChannelManagementViewController.swift */; };
 		4DC2826C207B069100462A2D /* MCChannelManagementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DC2826A207B069100462A2D /* MCChannelManagementViewController.xib */; };
+		4DCF7DE920AE70CE007DD7C0 /* MCConsumerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCF7DE820AE70CE007DD7C0 /* MCConsumerModel.swift */; };
 		7FD936AD208E2348001ABC22 /* MCChannelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD936AC208E2348001ABC22 /* MCChannelModel.swift */; };
 		7FD936AF20921A1F001ABC22 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FD936AE20921A1F001ABC22 /* SQLite.framework */; };
 /* End PBXBuildFile section */
@@ -117,6 +118,7 @@
 		4DAB14B0207A082D007CBD54 /* MCCategoryManageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCCategoryManageViewController.xib; sourceTree = "<group>"; };
 		4DC28269207B069100462A2D /* MCChannelManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCChannelManagementViewController.swift; sourceTree = "<group>"; };
 		4DC2826A207B069100462A2D /* MCChannelManagementViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCChannelManagementViewController.xib; sourceTree = "<group>"; };
+		4DCF7DE820AE70CE007DD7C0 /* MCConsumerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCConsumerModel.swift; sourceTree = "<group>"; };
 		7FD936AC208E2348001ABC22 /* MCChannelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCChannelModel.swift; sourceTree = "<group>"; };
 		7FD936AE20921A1F001ABC22 /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = ../Carthage/Build/iOS/SQLite.framework; sourceTree = "<group>"; };
 		7FD936B020921A8D001ABC22 /* CoreActionSheetPicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreActionSheetPicker.framework; path = ../Carthage/Build/iOS/CoreActionSheetPicker.framework; sourceTree = "<group>"; };
@@ -322,6 +324,7 @@
 			children = (
 				4D775BC72083962E0097CDD9 /* MCCategoryModel.swift */,
 				7FD936AC208E2348001ABC22 /* MCChannelModel.swift */,
+				4DCF7DE820AE70CE007DD7C0 /* MCConsumerModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				4D049259209C0FCE007AE4E8 /* MCPhotoHelper.swift in Sources */,
 				4D52FF4B20639D0E00ABB17A /* MCBaseViewController.swift in Sources */,
 				4DC2826B207B069100462A2D /* MCChannelManagementViewController.swift in Sources */,
+				4DCF7DE920AE70CE007DD7C0 /* MCConsumerModel.swift in Sources */,
 				4D2A45C7205974EE00A2BE99 /* MCSellRecordListViewController.swift in Sources */,
 				4D1C3A51205223470014DDE9 /* AppDelegate.swift in Sources */,
 				4D030C2120ABE3AC005E52CC /* MCConsumerInfoTableViewCell.swift in Sources */,

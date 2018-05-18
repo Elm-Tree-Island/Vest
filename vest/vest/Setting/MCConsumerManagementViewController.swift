@@ -19,8 +19,9 @@ class MCConsumerManagementViewController: MCBaseViewController, UITableViewDeleg
         super.viewDidLoad()
         self.title = "客户管理"
 
-        // Do any additional setup after loading the view.
         self.setupTableView()
+        
+        self.arrDatasource = MCDatabaseHelper.sharedInstance.getAllConsumers()
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,19 +31,18 @@ class MCConsumerManagementViewController: MCBaseViewController, UITableViewDeleg
     
     // MARK: - UI Init
     func setupTableView() -> Void {
-        self.arrDatasource = ["123"]
-        
         self.tableview.delegate = self
         self.tableview.dataSource = self
         
-        self.tableview .register(MCConsumerInfoTableViewCell.self, forCellReuseIdentifier: CELL_IDENTIFIER)
+        self.tableview.register(UINib(nibName: "MCConsumerInfoTableViewCell", bundle: nil), forCellReuseIdentifier: CELL_IDENTIFIER)
     }
     
     // MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableview.dequeueReusableCell(withIdentifier: CELL_IDENTIFIER, for: indexPath)
+        let cell = tableview.dequeueReusableCell(withIdentifier: CELL_IDENTIFIER, for: indexPath) as! MCConsumerInfoTableViewCell
         
-        // TODO: 填充数据
+        let model = self.arrDatasource.object(at: indexPath.row) as! MCConsumerModel
+        cell.configWithConsumer(model)
         
         return cell
     }

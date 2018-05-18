@@ -24,4 +24,26 @@ class MCConsumerInfoTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    /// Config the cell data with MCConsumerModel model
+    ///
+    /// - Parameter model: MCConsumerModel object
+    func configWithConsumer(_ model:MCConsumerModel) -> Void {
+        if let name = model.name {
+            self.lblName.text = name
+        } else {
+            self.lblName.text = ""
+        }
+        
+        if let mobileNumber = model.mobileNumber {
+            self.lblMobileNum.text = mobileNumber
+        } else {
+            self.lblMobileNum.text = ""
+        }
+        
+        if let address = model.address {
+            self.lblAddress.text = address
+        } else {
+            self.lblAddress.text = ""
+        }
+    }
 }
