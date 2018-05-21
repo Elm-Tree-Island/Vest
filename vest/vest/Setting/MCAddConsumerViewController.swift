@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import SwiftProgressHUD
 
 class MCAddConsumerViewController: MCBaseViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     let CELL_IDENTIFIER = "add_consumer_tableview_cell_identifier"
     var consumerModel:MCConsumerModel!
+    var delegate:MCConsumerManagementDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,8 +46,15 @@ class MCAddConsumerViewController: MCBaseViewController, UITableViewDataSource, 
         self.consumerModel.mobileNumber = (mobileNumber?.count == 0 ? "" : mobileNumber)
         self.consumerModel.address = (address?.count == 0 ? "" : address)
         
-        MCDatabaseHelper.sharedInstance.insertConsumer(model: self.consumerModel)
-        self.navigationController?.popViewController(animated: true)
+        let result = MCDatabaseHelper.sharedInstance.insertConsumer(model: self.consumerModel)
+        if result {
+            // 插入成功
+            SwiftProgressHUD.showSuccess("添加成功", autoClear: true, autoClearTime: 2)
+            self.navigationController?.popViewController(animated: true)
+            self.delegate?.didAddConsumer(self.consumerModel)
+        } else {
+            SwiftProgressHUD.showSuccess("添加失败", autoClear: true, autoClearTime: 2)
+        }
     }
 
     // MARK: - UITableViewDataSource

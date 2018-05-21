@@ -11,7 +11,12 @@ import CleanroomLogger
 
 let CELL_IDENTIFIER = "cell_consumer_management_identifier"
 
-class MCConsumerManagementViewController: MCBaseViewController, UITableViewDelegate, UITableViewDataSource {
+protocol MCConsumerManagementDelegate {
+    // Add the consumer operation
+    func didAddConsumer(_ newConsumer:MCConsumerModel) -> Void
+}
+
+class MCConsumerManagementViewController: MCBaseViewController, UITableViewDelegate, UITableViewDataSource, MCConsumerManagementDelegate {
 
     @IBOutlet weak var tableview: UITableView!
     var arrDatasource:NSArray!
@@ -20,10 +25,13 @@ class MCConsumerManagementViewController: MCBaseViewController, UITableViewDeleg
         super.viewDidLoad()
         self.title = "客户管理"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped(_:)))
-
-        self.setupTableView()
         
         self.arrDatasource = MCDatabaseHelper.sharedInstance.getAllConsumers()
+        self.setupTableView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,6 +42,7 @@ class MCConsumerManagementViewController: MCBaseViewController, UITableViewDeleg
     // MARK: - Event Handling
     @objc func addTapped(_ sender:UIBarButtonItem) {
         let controller = MCAddConsumerViewController()
+        controller.delegate = self
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
@@ -41,6 +50,7 @@ class MCConsumerManagementViewController: MCBaseViewController, UITableViewDeleg
     func setupTableView() -> Void {
         self.tableview.delegate = self
         self.tableview.dataSource = self
+        self.tableview.tableFooterView = UIView()
         
         self.tableview.register(UINib(nibName: "MCConsumerInfoTableViewCell", bundle: nil), forCellReuseIdentifier: CELL_IDENTIFIER)
     }
@@ -81,5 +91,13 @@ class MCConsumerManagementViewController: MCBaseViewController, UITableViewDeleg
     // MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.arrDatasource.count
+    }
+    
+    // MARK: - MCConsumerManagementDelegate
+    func didAddConsumer(_ newConsumer:MCConsumerModel) -> Void {
+        self.arrDatasource = MCDatabaseHelper.sharedInstance.getAllConsumers()
+        DispatchQueue.main.async {
+            self.tableview.reloadData()
+        }
     }
 }
