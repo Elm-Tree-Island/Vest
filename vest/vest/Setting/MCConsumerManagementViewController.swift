@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CleanroomLogger
 
 let CELL_IDENTIFIER = "cell_consumer_management_identifier"
 
@@ -56,6 +57,25 @@ class MCConsumerManagementViewController: MCBaseViewController, UITableViewDeleg
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 78;
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let model = self.arrDatasource.object(at: indexPath.row) as! MCConsumerModel
+            if let consumerId = model.consumerId {
+                let result = MCDatabaseHelper.sharedInstance.deleteConsumer(consumerId: consumerId)
+                if result {
+                    Log.debug?.message("删除用户 - 成功")
+                    self.arrDatasource = MCDatabaseHelper.sharedInstance.getAllConsumers()
+                    DispatchQueue.main.async {
+                        self.tableview.deleteRows(at: [indexPath], with: .automatic)
+                    }
+                } else {
+                    Log.error?.message("删除用户 - 失败")
+                    Log.error?.trace()
+                }
+            }
+        }
     }
     
     // MARK: - UITableViewDataSource
