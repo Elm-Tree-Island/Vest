@@ -104,12 +104,13 @@ class MCChannelManagementViewController: MCBaseViewController, UITableViewDataSo
             if channelModel.channelId > 0 {
                 let result = MCDatabaseHelper.sharedInstance.deleteChannel(channelId: channelModel.channelId)
                 if result {     // 删除成功
+                    Log.error?.message("Delete Channel Success.")
                     self.arrDataSource = MCDatabaseHelper.sharedInstance.getAllChannel()
                     DispatchQueue.main.async {
                         self.tableview.deleteRows(at: [indexPath], with: .automatic)
                     }
                 } else {    // 删除失败
-                    
+                    Log.error?.message("Delete Channel Failed.")
                 }
             }
             
