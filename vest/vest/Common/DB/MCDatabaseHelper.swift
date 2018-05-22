@@ -309,6 +309,19 @@ class MCDatabaseHelper: NSObject {
         return true
     }
     
+    func updateConsumer(model:MCConsumerModel) -> Bool {
+        do {
+            let currentConsumer = TABLE_CONSUMER.filter(TABLE_CONSUMER_ID == model.consumerId)
+            
+            let rowID = try dbConnection.run(currentConsumer.update(TABLE_CONSUMER_NAME <- model.name!, TABLE_CONSUMER_MOBILE <- model.mobileNumber!, TABLE_CONSUMER_ADDRESS <- model.address!))
+            Log.debug?.message("Insert consumer successfully, new RowId = \(rowID)")
+        } catch {
+            Log.error?.message("Insert consumer Failed, category name\(model.name!)")
+            return false
+        }
+        return true
+    }
+    
     func deleteConsumer(consumerId:Int64) -> Bool {
         let recordToDelete = TABLE_CONSUMER.filter(TABLE_CONSUMER_ID == consumerId)
         do {
