@@ -89,6 +89,8 @@ class MCConsumerManagementViewController: MCBaseViewController, UITableViewDeleg
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.tableview.deselectRow(at: indexPath, animated: true)
+        
         let controller = MCAddConsumerViewController()
         controller.mode = EDIT_MODE.EDIT_MODE_EDIT
         controller.consumerModel = self.arrDatasource.object(at: indexPath.row) as! MCConsumerModel
