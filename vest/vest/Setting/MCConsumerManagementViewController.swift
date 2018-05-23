@@ -42,6 +42,7 @@ class MCConsumerManagementViewController: MCBaseViewController, UITableViewDeleg
     // MARK: - Event Handling
     @objc func addTapped(_ sender:UIBarButtonItem) {
         let controller = MCAddConsumerViewController()
+        controller.mode = EDIT_MODE.EDIT_MODE_ADD
         controller.delegate = self
         self.navigationController?.pushViewController(controller, animated: true)
     }
