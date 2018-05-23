@@ -94,6 +94,7 @@ class MCConsumerManagementViewController: MCBaseViewController, UITableViewDeleg
         
         let controller = MCAddConsumerViewController()
         controller.mode = EDIT_MODE.EDIT_MODE_EDIT
+        controller.delegate = self
         controller.consumerModel = self.arrDatasource.object(at: indexPath.row) as! MCConsumerModel
         self.navigationController?.pushViewController(controller, animated: true)
     }
