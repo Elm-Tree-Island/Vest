@@ -57,6 +57,8 @@
 		4DCF7DED20AEBF02007DD7C0 /* MCAddConsumerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DCF7DEB20AEBF02007DD7C0 /* MCAddConsumerViewController.xib */; };
 		4DCF7DF120AED4E9007DD7C0 /* MCInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCF7DEF20AED4E9007DD7C0 /* MCInputTableViewCell.swift */; };
 		4DCF7DF220AED4E9007DD7C0 /* MCInputTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DCF7DF020AED4E9007DD7C0 /* MCInputTableViewCell.xib */; };
+		7F6D12DC20B708EC00F371CC /* MCAddOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6D12DA20B708EC00F371CC /* MCAddOrderViewController.swift */; };
+		7F6D12DD20B708EC00F371CC /* MCAddNewOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F6D12DB20B708EC00F371CC /* MCAddNewOrderViewController.xib */; };
 		7FD936AD208E2348001ABC22 /* MCChannelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD936AC208E2348001ABC22 /* MCChannelModel.swift */; };
 		7FD936AF20921A1F001ABC22 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FD936AE20921A1F001ABC22 /* SQLite.framework */; };
 /* End PBXBuildFile section */
@@ -127,6 +129,8 @@
 		4DCF7DEB20AEBF02007DD7C0 /* MCAddConsumerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCAddConsumerViewController.xib; sourceTree = "<group>"; };
 		4DCF7DEF20AED4E9007DD7C0 /* MCInputTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCInputTableViewCell.swift; sourceTree = "<group>"; };
 		4DCF7DF020AED4E9007DD7C0 /* MCInputTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCInputTableViewCell.xib; sourceTree = "<group>"; };
+		7F6D12DA20B708EC00F371CC /* MCAddOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCAddOrderViewController.swift; sourceTree = "<group>"; };
+		7F6D12DB20B708EC00F371CC /* MCAddNewOrderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCAddNewOrderViewController.xib; sourceTree = "<group>"; };
 		7FD936AC208E2348001ABC22 /* MCChannelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCChannelModel.swift; sourceTree = "<group>"; };
 		7FD936AE20921A1F001ABC22 /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = ../Carthage/Build/iOS/SQLite.framework; sourceTree = "<group>"; };
 		7FD936B020921A8D001ABC22 /* CoreActionSheetPicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreActionSheetPicker.framework; path = ../Carthage/Build/iOS/CoreActionSheetPicker.framework; sourceTree = "<group>"; };
@@ -229,6 +233,8 @@
 			isa = PBXGroup;
 			children = (
 				4D2A45C6205974EE00A2BE99 /* MCSellRecordListViewController.swift */,
+				7F6D12DA20B708EC00F371CC /* MCAddOrderViewController.swift */,
+				7F6D12DB20B708EC00F371CC /* MCAddNewOrderViewController.xib */,
 			);
 			path = Sell;
 			sourceTree = "<group>";
@@ -418,6 +424,7 @@
 				4DC2826C207B069100462A2D /* MCChannelManagementViewController.xib in Resources */,
 				4DCF7DF220AED4E9007DD7C0 /* MCInputTableViewCell.xib in Resources */,
 				4D1C3A5A205223470014DDE9 /* Assets.xcassets in Resources */,
+				7F6D12DD20B708EC00F371CC /* MCAddNewOrderViewController.xib in Resources */,
 				4D2A45EC206001D600A2BE99 /* MCAddStorageViewController.xib in Resources */,
 				4DCF7DED20AEBF02007DD7C0 /* MCAddConsumerViewController.xib in Resources */,
 				4D2A45D4205A68D700A2BE99 /* StorageRecordTableViewCell.xib in Resources */,
@@ -468,6 +475,7 @@
 				4D775B98207EF2900097CDD9 /* MCAboutMeViewController.swift in Sources */,
 				4D775BC52082506D0097CDD9 /* MCSummaryViewController.swift in Sources */,
 				4DCF7DF120AED4E9007DD7C0 /* MCInputTableViewCell.swift in Sources */,
+				7F6D12DC20B708EC00F371CC /* MCAddOrderViewController.swift in Sources */,
 				4D049259209C0FCE007AE4E8 /* MCPhotoHelper.swift in Sources */,
 				4D52FF4B20639D0E00ABB17A /* MCBaseViewController.swift in Sources */,
 				4DCF7DEC20AEBF02007DD7C0 /* MCAddConsumerViewController.swift in Sources */,
