@@ -104,10 +104,12 @@ class MCAddStorageViewController: MCBaseViewController, UITableViewDelegate, UIT
     }
     
     @objc func onTapImageView() {
-        self.navigationController?.present(self.imagePickerController, animated: true, completion: {
-            
-        })
-        
+        if Platform.isSimulator {       // 模拟器
+            SwiftProgressHUD.showOnlyText("模拟器不支持拍照功能")
+        } else {        // 真机
+            self.navigationController?.present(self.imagePickerController, animated: true, completion: {
+            })
+        }
     }
     
     // MARK: - UITableViewDelegate Methods
