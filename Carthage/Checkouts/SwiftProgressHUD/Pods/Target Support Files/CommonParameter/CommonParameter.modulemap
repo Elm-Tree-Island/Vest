@@ -1,6 +1,0 @@
-framework module CommonParameter {
-  umbrella header "CommonParameter-umbrella.h"
-
-  export *
-  module * { export * }
-}
